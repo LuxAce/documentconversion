@@ -1,0 +1,61 @@
+doc(docName, selfcover, sections) ::= <<
+<?xml version="1.0"?>
+<!DOCTYPE html [
+    <!ENTITY nbsp "&#160;">
+]>
+<doc name="$docName$">
+	$selfcover$
+	$sections$
+</doc>
+>>
+
+selfcover(selfcover) ::= <<
+<selfcover>
+	<system_identification>$selfcover.systemId$</system_identification>
+	<revision> 
+  	<id>$selfcover.revision.id$</id>  
+  	<date>$selfcover.revision.date$</date>  
+  	<superseding>$selfcover.revision.supercedes; separator="\n"$</superseding> 
+  	</revision>
+  <heading>$selfcover.heading; separator="\n"$</heading>  
+  <title>$selfcover.title; separator="\n"$</title> 
+  <img src="$selfcover.imageStr$">  
+  <ams>$selfcover.ams$</ams>  
+  <distribution>$selfcover.distribution$</distribution> 
+</selfcover>  
+>>
+
+revision(id, date, supercede) ::= <<
+<revision>
+  <id>$id$</id>
+  <date>$date$</date>
+  $if(supercede)$
+  <superseding>
+  	$supercede; separator="\n"$
+  </superseding>
+  $endif$
+</revision>
+>>
+
+system_identification(values) ::= <<
+<system_identification>
+	$values; separator="\n"$
+</system_identification>
+>>
+
+sections(sections) ::= <<
+	$sections; separator="\n"$
+>>
+
+section(name, pages) ::= <<
+<section name="$name$">
+	$pages; separator="\n"$
+</section>
+>>
+
+
+page(divs, number) ::= <<
+<page number="$number$">
+	$divs; separator="\n"$
+</page>
+>>
