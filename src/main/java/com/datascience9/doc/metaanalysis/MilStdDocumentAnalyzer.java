@@ -1,4 +1,4 @@
-package com.datascience9.doc.analysis;
+package com.datascience9.doc.metaanalysis;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,6 +13,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import com.datascience9.doc.analysis.HtmlAnalyzer;
 import com.datascience9.doc.pojo.DocTypeEnum;
 import com.datascience9.doc.transform.SelfCoverParser;
 import com.datascience9.doc.util.DocumentConverterHelper;

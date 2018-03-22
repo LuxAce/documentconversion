@@ -51,22 +51,22 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 	
 	@Override
 	public void generatePDF(File inputfile, File outputfile) throws Exception {
-		OutputStream out = null;
-		PdfWriter writer = null;
-		
-		logger.info("generate PDF for " + inputfile);
-		
-		cssStyles = PDFUtil.getCssStyleSheetAsMap(Paths.get(inputfile.toPath().getParent().toString(), "style.css"));
-		input = inputfile.toPath();
-		
-		Document document = Jsoup.parse(inputfile, "UTF-8");
+    OutputStream out = null;
+    PdfWriter writer = null;
+
+    logger.info("generate PDF for " + inputfile + " to " + outputfile);
+
+    cssStyles = PDFUtil.getCssStyleSheetAsMap(Paths.get(inputfile.toPath().getParent().toString(), "style.css"));
+    input = inputfile.toPath();
+
+    Document document = Jsoup.parse(inputfile, "UTF-8");
     Element root = document.select("doc").first();
     
     outdoc = new com.lowagie.text.Document(PageSize.A4);
     out = new FileOutputStream(outputfile);
     
-		writer = MilStd962Xml2PdfHelper2.createDocument(outdoc, root, out);
-		writer.setFooter(PDFUtil.getFooter(outdoc));
+    writer = MilStd962Xml2PdfHelper2.createDocument(outdoc, root, out);
+    writer.setFooter(PDFUtil.getFooter(outdoc));
     ReportEvent events = new ReportEvent();
     writer.setPageEvent(events);
     outdoc.open();

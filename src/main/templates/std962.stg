@@ -19,7 +19,7 @@ selfcover(selfcover) ::= <<
   	</revision>
   <heading>$selfcover.heading; separator="\n"$</heading>  
   <title>$selfcover.title; separator="\n"$</title> 
-  <img src="$selfcover.imageStr$">  
+  <img src="$selfcover.imageStr$"/>  
   <ams>$selfcover.ams$</ams>  
   <distribution>$selfcover.distribution$</distribution> 
 </selfcover>  

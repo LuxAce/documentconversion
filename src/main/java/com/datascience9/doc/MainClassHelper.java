@@ -70,6 +70,12 @@ public class MainClassHelper {
 	      .desc("Analyze the document and categorize the document types.")
 	      .build();
 	   
+	   final Option metaAnalysisOption = Option.builder("meta")
+		      .required(false)
+		      .hasArg(false)
+		      .desc("Analyze the document and categorize the document types.")
+		      .build();
+	   
 	   final Option transformationOption = Option.builder("transform")
 	      .required(false)
 	      .hasArg(false)
@@ -88,6 +94,18 @@ public class MainClassHelper {
 		      .desc("Transform XML to PDF.")
 		      .build();
 	   
+      final Option guiOption = Option.builder("gui")
+		      .required(false)
+		      .hasArg(false)
+		      .desc("Launch GUI.")
+		      .build();
+      
+	   final Option validateOption = Option.builder("validate")
+		      .required(false)
+		      .hasArg(true)
+		      .desc("validate URL.")
+		      .build();
+	   
 	   final Option helpOption = Option.builder("help")
 		      .required(false)
 		      .hasArg(false)
@@ -98,9 +116,12 @@ public class MainClassHelper {
 	   options.addOption(allOption);
 	   options.addOption(preprocessingOption);
 	   options.addOption(analysisOption);
+	   options.addOption(metaAnalysisOption);
 	   options.addOption(transformationOption);
 	   options.addOption(pdfOption);
 	   options.addOption(propertiesOption);
+      options.addOption(guiOption);
+	   options.addOption(validateOption);
 	   options.addOption(helpOption);
 	   return options;
 	}

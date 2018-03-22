@@ -22,6 +22,12 @@ public class PDFGeneratorProcessor  {
 	public PDFGeneratorProcessor() {
 		analysisResult = FileUtils.readFile2MapOfString(ConstantHelper.ANALYSIS_RESULT, Charset.defaultCharset());
 	}
+   
+   public PDFGeneratorProcessor(Logger logger) {
+		this();
+      this.logger = logger;
+	}
+   
 	public void generate(Path input, Path output) throws Exception {
 		
 		Files.list(input)
@@ -49,8 +55,11 @@ public class PDFGeneratorProcessor  {
 				Optional<PDFGenerator>  option = 
 						PDFGeneratorFactory.getGenerator(analysisResult.get(result.get().getParent().toFile().getName()));
 				if (option.isPresent()) {
+              PDFGenerator generator = option.get();
+              generator.setLogger(this.logger);
 					option.get().generatePDF(result.get().toFile(), 
-							Paths.get(result.get().toFile().getParentFile().getAbsolutePath(), "result.pdf").toFile());
+							Paths.get(result.get().toFile().getParentFile().getParentFile().getAbsolutePath(), 
+									result.get().toFile().getParentFile().getName() + ".pdf").toFile());
 				}
 
 			} catch (Exception e) {

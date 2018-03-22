@@ -1,4 +1,4 @@
-package com.datascience9.doc.transform;
+package com.datascience9.doc.metaanalysis;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -9,25 +9,23 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Logger;
 
-import org.stringtemplate.v4.STGroup;
-import org.stringtemplate.v4.STGroupFile;
-import org.stringtemplate.v4.StringRenderer;
-
 import com.datascience9.doc.ConstantHelper;
+import com.datascience9.doc.analysis.HtmlAnalyzer;
 import com.datascience9.doc.util.FileUtils;
 import com.datascience9.doc.util.LoggingUtil;
+import java.util.logging.Level;
 
-public class Html2XmlProcessor {
-	protected Logger logger = LoggingUtil.getDeveloperLogger(this.getClass().getName());
-	Map<String, String> analysisResult;
+public class MetaAnalysisProcessor {
+  protected Logger logger = LoggingUtil.getDeveloperLogger(this.getClass().getName());
+  Map<String, String> analysisResult;
 	
-   public Html2XmlProcessor() {}
-   
-   public Html2XmlProcessor(Logger logger) {
-     this.logger = logger;
-   }
-	
-	public void transform(Path input, Path output) throws Exception {
+  public MetaAnalysisProcessor() {}
+  
+  public MetaAnalysisProcessor(Logger logger) {
+    this.logger = logger;
+  }
+  
+	public void analyze(Path input, Path output) throws Exception {
 		analysisResult = FileUtils.readFile2MapOfString(ConstantHelper.ANALYSIS_RESULT, Charset.defaultCharset());
 		
 		Files.list(input)
@@ -40,15 +38,15 @@ public class Html2XmlProcessor {
 				.filter(files -> Files.isRegularFile(files, LinkOption.NOFOLLOW_LINKS)
 						&&  files.toFile().getName().equals("clean.html"))
 				.forEach(path -> {
-					Optional<Html2XmlTransfomer>  option = 
-							Html2XmlTransformerFactory.getTransformer(analysisResult.get(path.getParent().toFile().getName()));
+					Optional<HtmlAnalyzer>  option = 
+							MetaAnalysisFactory.getAnalyzer(analysisResult.get(path.getParent().toFile().getName()));
 					
 					if (option.isPresent()) {
-						option.get().transformFile(path);
+						option.get().collectMeta(path);
 					}
 				});
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (IOException ex) {
+				logger.log(Level.SEVERE, "ERROR analyze", ex);
 			}
 		});
 	}

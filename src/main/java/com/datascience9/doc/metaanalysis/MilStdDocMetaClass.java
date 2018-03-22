@@ -1,10 +1,12 @@
-package com.datascience9.doc.analysis;
+package com.datascience9.doc.metaanalysis;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+
+import com.datascience9.doc.analysis.DocMetaClass;
 
 public class MilStdDocMetaClass extends DocMetaClass {
 

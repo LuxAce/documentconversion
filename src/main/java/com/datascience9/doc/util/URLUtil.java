@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public class URLUtil {
 	static Logger logger = LoggingUtil.getDeveloperLogger(URLUtil.class.getName());
-	public boolean checkReference(String urlStr) {
+	public static boolean checkReference(String urlStr) {
 		try {
   		URL url = new URL(urlStr);
       HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -19,7 +19,7 @@ public class URLUtil {
       if (code==200) return true;
       else return false;
 		} catch (Exception ex) {
-			logger.log(Level.SEVERE, "Unable to connect to " + urlStr, ex);
+			logger.log(Level.SEVERE, "Unable to connect to " + urlStr);
 			return false;
 		}
 	}

@@ -19,14 +19,20 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.hwpf.converter.PicturesManager;
 import org.apache.poi.hwpf.converter.CustomWord2HtmlConverter;
-import org.apache.poi.hwpf.converter.WordToHtmlConverter;
 import org.apache.poi.hwpf.usermodel.PictureType;
 import org.w3c.dom.Document;
 
 import com.datascience9.doc.util.DocumentConverterHelper;
+import java.util.logging.Logger;
 
 public class Doc2Html extends DocConverter {
 
+  public Doc2Html() {}
+  
+  public Doc2Html(Logger logger) {
+    this.logger = logger;
+  }
+  
 	public static void main (String[] args) throws Throwable {
 		new Doc2Html().extract(
 				Paths.get("/media/paul/workspace/pdftest/"), 

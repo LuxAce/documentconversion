@@ -21,7 +21,7 @@ public class JsonUtils {
 	public static void write2File(Path output, Object o) {
 		try {
   		if (!Files.exists(output, LinkOption.NOFOLLOW_LINKS)) {
-  			Files.createDirectories(output.getParent(), FileUtils.generateStandardFileAttributes());
+  			Files.createDirectories(output.getParent());
   		}
   		Writer writer = new FileWriter(output.toFile());
 	    Gson gson = new GsonBuilder().setPrettyPrinting().create();

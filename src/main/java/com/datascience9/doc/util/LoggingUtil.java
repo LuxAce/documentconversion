@@ -9,10 +9,8 @@ import java.util.logging.SimpleFormatter;
 public class LoggingUtil {
 	private static final String HANDLE_FILE_NAME = "documentconversion.log";
 	private static final String DEVELOPER = "developer.log";
-//	private static final String ANALYSIS = "analysis-result.log";
 	private static FileHandler fileHandler;
 	private static FileHandler developerFileHandler;
-//	private static FileHandler analysisFileHandler;
 	static {
 		try {
 			
@@ -23,8 +21,6 @@ public class LoggingUtil {
 			developerFileHandler = new FileHandler(DEVELOPER, true);
 			developerFileHandler.setFormatter(new SimpleFormatter());
 
-//			analysisFileHandler = new FileHandler(ANALYSIS, true);
-//			analysisFileHandler.setFormatter(new SimpleFormatter());
 		} catch (Exception ex) {
 			System.err.println("log file NOT FOUND:" + HANDLE_FILE_NAME);
 		}

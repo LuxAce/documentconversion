@@ -21,8 +21,15 @@ import com.datascience9.doc.util.DocumentConverterHelper;
 import com.datascience9.doc.util.LoggingUtil;
 
 public class HtmlSanitizer {
-	final public Logger logger = LoggingUtil.getLogger(this.getClass().getName());
-	final public Logger developerLogger = LoggingUtil.getDeveloperLogger(this.getClass().getName());
+	Logger logger = LoggingUtil.getLogger(this.getClass().getName());
+	Logger developerLogger = LoggingUtil.getDeveloperLogger(this.getClass().getName());
+   
+   public HtmlSanitizer() {}
+   
+   public HtmlSanitizer(Logger logger) {
+     this.logger = logger;
+   }
+   
 	public void sanitizer(Path input, Path output) throws Exception {
 		Files.list(input)
 		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))

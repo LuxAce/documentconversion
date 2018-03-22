@@ -12,6 +12,14 @@ import com.datascience9.doc.util.LoggingUtil;
 public abstract class PDFGeneratorImpl implements PDFGenerator {
 	protected Logger logger = LoggingUtil.getLogger(this.getClass().getName());
 	
+   public PDFGeneratorImpl() {}
+   
+   public PDFGeneratorImpl(Logger logger) {
+     this.logger = logger;
+   }
+   
+   public void setLogger(Logger logger) { this.logger = logger; }
+   
 	public void generate(Path input, Path output) throws Exception {
 		Files.list(input)
 		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))

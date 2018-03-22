@@ -31,17 +31,6 @@ public class FileUtils {
 
 	private static Logger logger = LoggingUtil.getDeveloperLogger(FileUtils.class.getName());
 
-	public static FileAttribute<Set<PosixFilePermission>> generateStandardFileAttributes() {
-		Set<PosixFilePermission> perms = new HashSet<>();
-		// add permission as rw-r--r-- 644
-		perms.add(PosixFilePermission.OWNER_WRITE);
-		perms.add(PosixFilePermission.OWNER_EXECUTE);
-		perms.add(PosixFilePermission.OWNER_READ);
-		perms.add(PosixFilePermission.GROUP_READ);
-		perms.add(PosixFilePermission.OTHERS_READ);
-		return PosixFilePermissions.asFileAttribute(perms);
-	}
-
 	public static void writeStringToFile(Path path, String s) throws Exception {
 
 		if (null == path)

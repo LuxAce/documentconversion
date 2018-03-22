@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.stringtemplate.v4.ST;
 
-import com.datascience9.doc.analysis.MilStdDocumentAnalyzer;
+import com.datascience9.doc.metaanalysis.MilStdDocumentAnalyzer;
 import com.datascience9.doc.pojo.DocDivision;
 import com.datascience9.doc.pojo.MilStd962DSelfCover;
 import com.datascience9.doc.util.FileUtils;

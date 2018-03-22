@@ -13,10 +13,17 @@ import org.jsoup.select.Elements;
 
 import com.datascience9.doc.ConstantHelper;
 import com.datascience9.doc.util.FileUtils;
+import java.util.logging.Logger;
 
 public class DocumentTypeAnalyzer extends HtmlAnalyzer {
 	Map<String, String> analysis = new HashMap<>();
 	
+   public DocumentTypeAnalyzer() {}
+   
+   public DocumentTypeAnalyzer(Logger logger) {
+     this.logger = logger;
+   }
+   
 	@Override
 	public void collectMeta(Path input) {
 		developerLogger.log(Level.FINE, "Start categorizing .." + input.getParent().toFile().getName());
