@@ -43,13 +43,25 @@ public class Doc2Html extends DocConverter {
   }
 	
 	@Override
-	public void extractText(Path input, Path output ) {
+	public void extractText(Path input, Path output) {
 		File newOutputDir = new File(output.toFile(), 
 				DocumentConverterHelper.getFileNameWithoutExtension(input.toFile().getName()));
 		newOutputDir.mkdirs();
 		try {
 			logger.info("start converting ... " + input);
 			convert(input.toFile(), newOutputDir);
+		} catch (Exception ex) { 
+			developerLogger.info("start converting ... " + input);
+			developerLogger.log(Level.SEVERE, "ERROR while extracting text from " + input, ex);
+			logger.severe("ERROR while extracting text from Word documents. Please report this error to technical team");
+		}
+	}
+	
+	@Override
+	public void extractTextFromFile(Path input, Path output) {
+		try {
+			logger.info("start converting ... " + input);
+			convert(input.toFile(), output.toFile());
 		} catch (Exception ex) { 
 			developerLogger.info("start converting ... " + input);
 			developerLogger.log(Level.SEVERE, "ERROR while extracting text from " + input, ex);

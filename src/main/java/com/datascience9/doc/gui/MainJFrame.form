@@ -149,7 +149,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblOutputDir">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel3"/>
+        <Property name="text" type="java.lang.String" value="Output Dir"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOutputDir">

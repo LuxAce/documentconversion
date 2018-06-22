@@ -19,7 +19,18 @@ public abstract class DocConverter {
 		.forEach(f -> extractText(f, output));
 	}
 	
+	/**
+	 * @param input dir
+	 * @param output.  Outputdir = output + input
+	 */
 	public abstract void extractText(Path input, Path output );
+	
+	/**
+	 * 
+	 * @param input file
+	 * @param output dir
+	 */
+	public abstract void extractTextFromFile(Path input, Path output );
 	
 	/**
 	 * The write file

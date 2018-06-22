@@ -1,9 +1,14 @@
 package com.datascience9.doc.transform;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.nio.file.Path;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.parser.Parser;
 import org.stringtemplate.v4.STGroup;
 import org.stringtemplate.v4.STGroupFile;
 import org.stringtemplate.v4.StringRenderer;
@@ -29,4 +34,17 @@ public abstract class Html2XmlTransfomer {
 	}
 	
 	protected abstract void transformFile(Path inputFile) ;
+	
+	protected boolean validate(Path inputFile) {
+		BufferedInputStream reader = null;
+		try {
+			reader = new BufferedInputStream(new FileInputStream(inputFile.toFile()));
+			
+			Document doc = Jsoup.parse(reader, "UTF-8", "", Parser.xmlParser());
+			
+			return true;
+		} catch (Exception ex) {
+			return false;
+		}
+	}
 }

@@ -29,6 +29,23 @@ public abstract class HtmlAnalyzer {
 		afterProcess();
 	}
 	
+	public void sanitizeFile(Path input, Path output) throws Exception {
+		Files.list(input)
+		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))
+		.forEach(dir -> {
+			try {
+				Files.list(dir)
+				.filter(files -> Files.isRegularFile(files, LinkOption.NOFOLLOW_LINKS)
+						&&  files.toFile().getName().equals("clean.html"))
+				.forEach(path -> collectMeta(path));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		});
+		
+		afterProcess();
+	}
+	
 	public abstract void collectMeta(Path input);
 	
 	protected void afterProcess() {}

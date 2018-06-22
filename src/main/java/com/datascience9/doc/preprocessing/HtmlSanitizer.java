@@ -7,17 +7,15 @@ import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
-import java.util.Optional;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import com.datascience9.doc.util.DocumentConverterHelper;
 import com.datascience9.doc.util.LoggingUtil;
 
 public class HtmlSanitizer {
@@ -57,8 +55,13 @@ public class HtmlSanitizer {
   		builder.append(doc.head());
   		
   		doc.body().children().stream().forEach(e -> cleanElement(e));
+  		
+  		List<String> images = findAllImages(doc);
+  		
   		builder.append(doc.body());
   		builder.append("</html>");
+  		
+  		fixImageTags(builder, images);
   		
   		File outputDir = new File(output.toFile(), input.toFile().getParentFile().getName());
   		outputDir.mkdirs();
@@ -68,6 +71,38 @@ public class HtmlSanitizer {
 		} catch (Exception ex) {
 			ex.printStackTrace(System.out);
 			return null;
+		}
+	}
+	
+	public String cleanHtmlFile(Path inputFile, Path output) {
+		developerLogger.info("Sanitizing .." + inputFile);
+		StringBuilder builder = new StringBuilder("<html>");
+		try {
+  		Document doc = Jsoup.parse(inputFile.toFile(), "UTF-8");
+  		builder.append(doc.head());
+  		
+  		doc.body().children().stream().forEach(e -> cleanElement(e));
+  		
+  		List<String> images = findAllImages(doc);
+  		
+  		builder.append(doc.body());
+  		builder.append("</html>");
+  		
+  		fixImageTags(builder, images);
+  		
+  		File outputFile = new File(output.toFile(), "clean.html");
+  		DocConverter.writeStringToFile(outputFile.toPath(), builder.toString());
+  		return outputFile.getAbsolutePath();
+		} catch (Exception ex) {
+			ex.printStackTrace(System.out);
+			return null;
+		}
+	}
+	
+	public void fixImageTags(StringBuilder builder, List<String> images) {
+		for (String img : images) {
+			int index = builder.indexOf(img);
+			builder.replace(index, index + img.length(), img + "</img>");
 		}
 	}
 	
@@ -84,13 +119,31 @@ public class HtmlSanitizer {
 		} else if ("p".equalsIgnoreCase(e.tagName())
 				&& e.toString().contains("Check the source to verify that this is the current version")) {
 			e.remove();
-		} else if ("p".equalsIgnoreCase(e.tagName())
-				&& e.select("img").size() > 0) {
-				e.select("img").first().append("</img>");
 		} else {
 			List<Element> children = e.children();
 			children.stream().forEach(child -> cleanElement(child));
 		}
+	}
+	
+	/**
+	 * flatMap accepts a stream not a list => convert a list to a stream first
+	 * @param doc
+	 * @return
+	 */
+	private static List<String> findAllImages(Document doc) {
+		return doc.body().children().stream().flatMap(e -> findImage(e).stream()).collect(Collectors.toList());
+		
+	}
+	
+	private static List<String> findImage(Element e) {
+		List<String> imgs = new ArrayList<>();
+		if ("img".equalsIgnoreCase(e.tagName())) {
+			imgs.add(e.toString());
+		} else {
+			List<Element> children = e.children();
+			for (Element child : e.children()) imgs.addAll(findImage(child));
+		}
+		return imgs;
 	}
 	
 	public static void main(String[] s) throws Exception {

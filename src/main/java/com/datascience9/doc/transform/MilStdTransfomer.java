@@ -1,5 +1,8 @@
 package com.datascience9.doc.transform;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayDeque;
@@ -12,6 +15,7 @@ import java.util.stream.Collectors;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.stringtemplate.v4.ST;
 
 import com.datascience9.doc.metaanalysis.MilStdDocumentAnalyzer;
@@ -30,9 +34,12 @@ public class MilStdTransfomer extends Html2XmlTransfomer {
 
 	@Override
 	protected void transformFile(Path input) {
+		BufferedInputStream reader = null;
 		ST st = getStringTemplateFolder().getInstanceOf("doc");
 		try {
-			Document doc = Jsoup.parse(input.toFile(), "UTF-8");
+			reader = new BufferedInputStream(new FileInputStream(input.toFile()));
+			
+			Document doc = Jsoup.parse(reader, "UTF-8", "", Parser.xmlParser());
 			MilStd962DSelfCover selfCover = generateSelfCover(doc.body().select("div").first());
 			
 			ST selfCoverST = getStringTemplateFolder().getInstanceOf("selfcover");
@@ -53,6 +60,15 @@ public class MilStdTransfomer extends Html2XmlTransfomer {
 			FileUtils.writeStringTemplateToFile(output, st);
 			
 		} catch (Exception ex) {ex.printStackTrace(System.out); }
+		finally {
+			if (null != reader)
+				try {
+					reader.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		}
 	}
 	
 	private MilStd962DSelfCover generateSelfCover(Element div) {
@@ -162,8 +178,11 @@ public class MilStdTransfomer extends Html2XmlTransfomer {
 	}
 	
 	public static void main(String[] s) throws Exception {
-		new MilStdTransfomer("./src/main/templates/std962.stg")
-		.transformFile(Paths.get("/media/paul/workspace/pdftest/334566B59C9340B78ED202A31F4E7B15/clean.html"));
+		MilStdTransfomer transformer = new MilStdTransfomer("./src/main/templates/std962.stg");
+		transformer.transformFile(Paths.get("/media/paul/workspace/pdftest/AB2514D4D9E142C59A62D353F58EB9C5/clean.html"));
+		transformer.validate(Paths.get("/media/paul/workspace/pdftest/AB2514D4D9E142C59A62D353F58EB9C5/result.html"));
+		
+		
 		
 //		new MilStdTransfomer("./src/main/templates/std962.stg")
 //		.transform(Paths.get("/media/paul/workspace/pdftest/")

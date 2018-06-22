@@ -74,7 +74,7 @@ public class MainJFrame extends javax.swing.JFrame {
     lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     lblTitle.setText("Document Conversion");
 
-    lblInputDir.setText("Input Dir");
+    lblInputDir.setText("Input Directory");
 
     txtInputDir.setText(ConfigurationHelper.getInputDir());
     txtInputDir.addActionListener(new java.awt.event.ActionListener() {
@@ -91,9 +91,9 @@ public class MainJFrame extends javax.swing.JFrame {
       }
     });
 
-    lblOutputDir.setText("jLabel3");
+    lblOutputDir.setText("Output Directory");
 
-    txtOutputDir.setText("Output directory");
+    txtOutputDir.setText("Output Directory");
 
     btnOutputDir.setText("Select Output Dir");
     btnOutputDir.setToolTipText("Select Output Directory");
