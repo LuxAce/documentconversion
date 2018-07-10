@@ -20,10 +20,11 @@ import com.datascience9.doc.util.DocumentConverterHelper;
 import com.datascience9.doc.util.JsonUtils;
 
 public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
-	MilStdDocMetaClass metaClass = new MilStdDocMetaClass();
-	
 	int currentPage = 0;
 	
+	public MilStdDocumentAnalyzer() {
+		super();
+	}
 	@Override
 	public void collectMeta(Path input) {
 		logger.log(Level.FINER, "Start analyzing .." + input);
@@ -39,8 +40,8 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 		}
 	}
 	
-	
-	private void collectStatistics(Document doc) {
+	@Override
+	public void collectStatistics(Document doc) {
 		if (!doesBodyContainOnlyDiv(doc.body())) {
 			developerLogger.info("document has other elements besides div");
 			return;
@@ -58,19 +59,19 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 	}
 	
 	private void analyzeSelfCoverPage(Element div) {
-		Deque<String> queue = DocumentConverterHelper.stripTag(div.children());
+		Deque<String> queue = DocumentConverterHelper.getTextFromParagraph(div.children());
 		boolean foundId = false;
 		
 		if (queue.isEmpty()) return;
 		while (!queue.isEmpty()) {
 			String nextToken = queue.pop();
 			
-			if (Arrays.stream(SelfCoverParser.SYSTEM_IDENT).anyMatch(str -> str.equals(queue.peek()))) {
+			if (Arrays.stream(SelfCoverParser.SYSTEM_IDENT).anyMatch(str -> nextToken.startsWith(str))) {
 				metaClass.setSystemId(nextToken);
 				continue;
 			}
-			
-			if (nextToken.startsWith("MIL-")) {
+
+			if (nextToken.startsWith("MIL")) {
 				if (!foundId) {
 					metaClass.setDocId(nextToken);
 					foundId = true;
@@ -88,7 +89,7 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 				continue;
 			} 
 			
-			break;
+//			break;
 		}
 		
 	}
@@ -99,7 +100,7 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 	
 	public static void main(String[] s) throws Exception {
 		new MilStdDocumentAnalyzer()
-		.sanitizer(Paths.get("/media/paul/workspace/pdftest/")
+		.sanitize(Paths.get("/media/paul/workspace/pdftest/")
 				, Paths.get("/media/paul/workspace/pdftest/"));
 	}
 	
@@ -116,18 +117,18 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 	}
 	
 	public static String getSectionName(Element div) {
-		Deque<String> queue = DocumentConverterHelper.stripTag(div.getAllElements());
-		List<String> list = new ArrayList<>(queue);
+		List<String> list  = DocumentConverterHelper.findAllText(div);
+
 		if (isPreamble(list)) return "PREAMPLE";
 		if (isForeWord(list)) return MilStdDocMetaClass.getForeword();
 		if (isContent(list)) return MilStdDocMetaClass.getContents();
 		if (isScope(list)) return MilStdDocMetaClass.getScope();
-		if (isReference(list)) return "REFERENCES";
-		if (isApplicable(list)) return MilStdDocMetaClass.getApplicableDocuments();
-		if (isDefinition(list)) return MilStdDocMetaClass.getdefinitions();
+//		if (isReference(list)) return "REFERENCES";
+//		if (isApplicable(list)) return MilStdDocMetaClass.getApplicableDocuments();
+//		if (isDefinition(list)) return MilStdDocMetaClass.getdefinitions();
 		if (isGeneralRequirement(list)) return MilStdDocMetaClass.getGeneralRequirements();
 		if (isDetailedRequirement(list)) return MilStdDocMetaClass.getDetailedRequirements();
-		if (isNote(list)) return MilStdDocMetaClass.getNotes();
+//		if (isNote(list)) return MilStdDocMetaClass.getNotes();
 		if (isAppendix(list)) return getAppendixName(list);
 		return "unknown";
 	}
@@ -140,15 +141,16 @@ public class MilStdDocumentAnalyzer extends HtmlAnalyzer {
 	}
 	
 	private static boolean isForeWord(List<String> list) {
-		return list
+		if (list.get(0).contains("FOREWORD") || list.get(0).contains("FORWARD")) return true;
+		else return
+				list
 				.stream()
-				.anyMatch(str -> str.contains("FOREWORD"));
+				.anyMatch(str -> str.contains("This standard is approved for use by")
+											|| str.contains("within the distribution limitations noted at the bottom of the cover"));
 	}
 
 	private static boolean isContent(List<String> list) {
-		return list
-				.stream()
-				.anyMatch(str -> str.contains("CONTENTS"));
+		return (list.get(0).contains("CONTENTS"));
 	}
 	
 	private static boolean isScope(List<String> list) {

@@ -27,6 +27,12 @@ public class Html2XmlProcessor {
      this.logger = logger;
    }
 	
+   /**
+    * convert HTML to XML
+    * @param input dir
+    * @param output dir
+    * @throws Exception
+    */
 	public void transform(Path input, Path output) throws Exception {
 		analysisResult = FileUtils.readFile2MapOfString(ConstantHelper.ANALYSIS_RESULT, Charset.defaultCharset());
 		
@@ -54,28 +60,12 @@ public class Html2XmlProcessor {
 	}
 	
 	public void transformFile(Path input, Path output) throws Exception {
-		analysisResult = FileUtils.readFile2MapOfString(ConstantHelper.ANALYSIS_RESULT, Charset.defaultCharset());
+		Optional<Html2XmlTransfomer>  option = 
+				Html2XmlTransformerFactory.getTransformer(ConstantHelper.STANDARD_PRACTICE);
 		
-		Files.list(input)
-		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))
-		.filter(path -> analysisResult.get(path.toFile().getName()) != null)
-		.filter(path -> !"UNKNOWN".equals(analysisResult.get(path.toFile().getName())))
-		.forEach(dir -> {
-			try {
-				Files.list(dir)
-				.filter(files -> Files.isRegularFile(files, LinkOption.NOFOLLOW_LINKS)
-						&&  files.toFile().getName().equals("clean.html"))
-				.forEach(path -> {
-					Optional<Html2XmlTransfomer>  option = 
-							Html2XmlTransformerFactory.getTransformer(analysisResult.get(path.getParent().toFile().getName()));
-					
-					if (option.isPresent()) {
-						option.get().transformFile(path);
-					}
-				});
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
+		if (option.isPresent()) {
+			option.get().transformFile(input);
+		}
+			
 	}
 }

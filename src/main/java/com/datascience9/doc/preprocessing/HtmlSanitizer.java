@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
@@ -16,6 +17,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import com.datascience9.doc.ConstantHelper;
+import com.datascience9.doc.analysis.HtmlAnalyzer;
+import com.datascience9.doc.metaanalysis.MetaAnalysisFactory;
+import com.datascience9.doc.metaanalysis.MilStdDocMetaClass;
+import com.datascience9.doc.metaanalysis.MilStdDocumentAnalyzer;
 import com.datascience9.doc.util.LoggingUtil;
 
 public class HtmlSanitizer {
@@ -28,7 +34,7 @@ public class HtmlSanitizer {
      this.logger = logger;
    }
    
-	public void sanitizer(Path input, Path output) throws Exception {
+	public void sanitize(Path input, Path output) throws Exception {
 		Files.list(input)
 		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))
 		.forEach(dir -> {
@@ -39,7 +45,7 @@ public class HtmlSanitizer {
 						&& !files.toFile().getName().equals("clean.html")
 						&& !files.toFile().getName().equals("transform.html"))
 				.forEach(path -> {
-					cleanHtml(path, output);
+					cleanHtml(path);
 				});
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -47,14 +53,22 @@ public class HtmlSanitizer {
 		});
 	}
 	
-	public String cleanHtml(Path input, Path output) {
+	public String cleanHtml(Path input) {
 		developerLogger.info("Sanitizing .." + input);
 		StringBuilder builder = new StringBuilder("<html>");
 		try {
   		Document doc = Jsoup.parse(input.toFile(), "UTF-8");
+  		
+  		Optional<HtmlAnalyzer> option = MetaAnalysisFactory.getAnalyzer(ConstantHelper.STANDARD_PRACTICE);
+  		HtmlAnalyzer analyzer = option.get();
+  		analyzer.collectStatistics(doc);
+  		MilStdDocMetaClass metaClass  = analyzer.getMetaClass();
+  		
   		builder.append(doc.head());
   		
-  		doc.body().children().stream().forEach(e -> cleanElement(e));
+  		doc.body().children().stream().forEach(e -> cleanElement(e, metaClass));
+  		doc.body().children().stream().forEach(e -> removeDivWithKeyword(e, "THIS PAGE IS INTENTIONALLY LEFT BLANK"));
+  		doc.body().children().stream().forEach(e -> cleanEmptyDiv(e));
   		
   		List<String> images = findAllImages(doc);
   		
@@ -63,34 +77,7 @@ public class HtmlSanitizer {
   		
   		fixImageTags(builder, images);
   		
-  		File outputDir = new File(output.toFile(), input.toFile().getParentFile().getName());
-  		outputDir.mkdirs();
-  		File outputFile = new File(outputDir, "clean.html");
-  		DocConverter.writeStringToFile(outputFile.toPath(), builder.toString());
-  		return outputFile.getAbsolutePath();
-		} catch (Exception ex) {
-			ex.printStackTrace(System.out);
-			return null;
-		}
-	}
-	
-	public String cleanHtmlFile(Path inputFile, Path output) {
-		developerLogger.info("Sanitizing .." + inputFile);
-		StringBuilder builder = new StringBuilder("<html>");
-		try {
-  		Document doc = Jsoup.parse(inputFile.toFile(), "UTF-8");
-  		builder.append(doc.head());
-  		
-  		doc.body().children().stream().forEach(e -> cleanElement(e));
-  		
-  		List<String> images = findAllImages(doc);
-  		
-  		builder.append(doc.body());
-  		builder.append("</html>");
-  		
-  		fixImageTags(builder, images);
-  		
-  		File outputFile = new File(output.toFile(), "clean.html");
+  		File outputFile = new File(input.toFile().getParentFile(), "clean.html");
   		DocConverter.writeStringToFile(outputFile.toPath(), builder.toString());
   		return outputFile.getAbsolutePath();
 		} catch (Exception ex) {
@@ -106,9 +93,27 @@ public class HtmlSanitizer {
 		}
 	}
 	
-	private void cleanElement(Element e) {
-		if ("p".equalsIgnoreCase(e.tagName())
-				&& (StringUtils.isEmpty(e.text())
+	/**
+	 * remove empty div
+	 * @param e
+	 */
+	private void cleanEmptyDiv(Element e) {
+		if ("div".equalsIgnoreCase(e.tagName()) 
+				&& StringUtils.isEmpty(e.text().trim())
+				&& e.select("img").isEmpty() ) {
+			e.remove();
+		} 
+	}
+	
+	private void removeDivWithKeyword(Element e, String keyword) {
+		if ("div".equalsIgnoreCase(e.tagName()) && (e.text().trim().startsWith(keyword))) {
+			e.remove();
+		} 
+	}
+	private void cleanElement(Element e, MilStdDocMetaClass metaClass) {
+
+		if (("p".equalsIgnoreCase(e.tagName()) )
+				&& (StringUtils.isEmpty(e.text().trim())
 						&& e.childNodeSize() == 0)) {
 			e.remove();
 		} else if ("br".equalsIgnoreCase(e.tagName())) {
@@ -119,9 +124,14 @@ public class HtmlSanitizer {
 		} else if ("p".equalsIgnoreCase(e.tagName())
 				&& e.toString().contains("Check the source to verify that this is the current version")) {
 			e.remove();
+		} 
+		else if (e.toString() != null && metaClass.getDocId() != null 
+				&& e.toString().contains("page") 
+				&& metaClass.getDocId().equalsIgnoreCase(e.text())) {
+			e.remove();
 		} else {
 			List<Element> children = e.children();
-			children.stream().forEach(child -> cleanElement(child));
+			children.stream().forEach(child -> cleanElement(child, metaClass));
 		}
 	}
 	
@@ -148,7 +158,7 @@ public class HtmlSanitizer {
 	
 	public static void main(String[] s) throws Exception {
 		new HtmlSanitizer()
-		.sanitizer(Paths.get("/media/paul/workspace/pdftest/")
-				, Paths.get("/media/paul/workspace/pdftest/"));
+		.sanitize(Paths.get("/media/paul/workspace/pdftest/output")
+				, Paths.get("/media/paul/workspace/pdftest/output"));
 	}
 }

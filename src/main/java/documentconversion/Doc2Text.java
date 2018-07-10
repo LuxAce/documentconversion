@@ -46,4 +46,10 @@ public class Doc2Text extends DocConverter {
 		DocConverter converter = new Doc2Text();
 		converter.extract(Paths.get("/media/paul/workspace/pdftest/"), Paths.get("/media/paul/workspace/pdftest/"));
   }
+
+	@Override
+	public void extractTextFromFile(Path input, Path output) {
+		// TODO Auto-generated method stub
+		
+	}
 }

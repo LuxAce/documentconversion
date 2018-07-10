@@ -135,7 +135,7 @@ public abstract class SelfCoverParser {
 	}
 	
 	public static boolean isChanged(String str) {
-		return (Arrays.stream(CHANGES).anyMatch(x -> str.startsWith(x)));
+		return (Arrays.stream(CHANGES).anyMatch(x -> str.toUpperCase().startsWith(x)));
 	}
 	
 	public static boolean isSection6(String str) {

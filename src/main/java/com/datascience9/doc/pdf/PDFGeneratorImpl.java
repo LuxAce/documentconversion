@@ -20,6 +20,9 @@ public abstract class PDFGeneratorImpl implements PDFGenerator {
    
    public void setLogger(Logger logger) { this.logger = logger; }
    
+  /**
+   * generate PDFs from a directory
+   */
 	public void generate(Path input, Path output) throws Exception {
 		Files.list(input)
 		.filter(f -> Files.isDirectory(f, LinkOption.NOFOLLOW_LINKS))
@@ -32,6 +35,12 @@ public abstract class PDFGeneratorImpl implements PDFGenerator {
 		});
 	}
 	
+	/**
+	 * generate PDFs from a directory
+	 * @param dir
+	 * @param output
+	 * @throws Exception
+	 */
 	private void generateFromDir(Path dir, Path output) throws Exception {
 		Optional<Path> result = 
 		Files.list(dir)

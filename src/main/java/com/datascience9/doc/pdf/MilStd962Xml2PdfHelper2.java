@@ -12,24 +12,33 @@ import org.jsoup.nodes.Element;
 import com.datascience9.doc.util.LoggingUtil;
 import com.lowagie.text.Chunk;
 import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
 import com.lowagie.text.Image;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfPageEventHelper;
 import com.lowagie.text.pdf.PdfWriter;
 
 public class MilStd962Xml2PdfHelper2 {
 	final static Logger logger = LoggingUtil.getLogger(MilStd962Xml2PdfHelper2.class.getName());
 	
+	/**
+	 * create an empty PDF document
+	 * @param outdoc
+	 * @param root
+	 * @param out
+	 * @return
+	 * @throws Exception
+	 */
 	public static PdfWriter createDocument(Document outdoc, Element root, OutputStream out) throws Exception
 	{
 		PdfWriter writer = PdfWriter.getInstance(outdoc, out);
 		writer.open();
-//		outdoc.addAuthor(ApplicationUtil.getProjectProperties().getProperty("application.author", "datascience9.com"));
-//		outdoc.addCreator(ApplicationUtil.getProjectProperties().getProperty("application.creator", "datascience9.com"));
 		return writer;
 	}
+	
 	
 	public static Paragraph createDistributionStatement(Element selfcover) {
 		String distribution = selfcover.select("distribution").first().html();
@@ -116,10 +125,11 @@ public class MilStd962Xml2PdfHelper2 {
 		Path imagePath = Paths.get(input.getParent().toString(), img);
 		try {
   		Image image = Image.getInstance(imagePath.toString());
+  		image.scaleToFit(300, 300);
   		image.setAlignment(Rectangle.ALIGN_CENTER);
   		return Optional.of(image);
 		} catch (Exception ex) {
-			logger.log(Level.SEVERE, "Cannot create logo from " + img);
+			logger.log(Level.SEVERE, "Cannot create logo from " + input.toString() + ", " + img);
 			return Optional.empty();
 		}
 		
@@ -152,7 +162,7 @@ public class MilStd962Xml2PdfHelper2 {
 		
 		if (selfcover.select("ams") != null) {
 			PdfPCell cell1 = new PdfPCell(new Paragraph(selfcover.select("ams").first().html()));
-			PdfPCell cell2 = new PdfPCell(new Paragraph(""));
+			PdfPCell cell2 = new PdfPCell(new Paragraph(selfcover.select("fsc").first().html()));
 			cell1.setBorder(Rectangle.NO_BORDER);
 			cell2.setBorder(Rectangle.NO_BORDER);
 			
@@ -163,4 +173,25 @@ public class MilStd962Xml2PdfHelper2 {
 		
 		return table;
 	}
+}
+
+class MilStd962PageEvent extends PdfPageEventHelper {
+	
+	Element selfcover = null;
+	
+	public MilStd962PageEvent(Element cover) {
+		this.selfcover = cover;
+	}
+	
+	@Override	
+	public void onEndPage(PdfWriter writer, Document document) {
+//		try {
+//			document.add(MilStd962Xml2PdfHelper2.createAsmSection(this.selfcover));
+//			document.add(MilStd962Xml2PdfHelper2.createDistributionStatement(this.selfcover));
+//		} catch (DocumentException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+  }
 }

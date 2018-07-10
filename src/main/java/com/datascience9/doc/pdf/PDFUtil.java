@@ -36,6 +36,7 @@ import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.PdfCell;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.pdf.PdfWriter;
 import com.steadystate.css.parser.CSSOMParser;
 import com.steadystate.css.parser.SACParserCSS1;
 
@@ -393,9 +394,10 @@ public class PDFUtil
   	}
   }
   
-  public static void addEmptyLines2Document(Document document, int lines) {
+  public static void addEmptyLines2Document(PdfWriter writer, Document document, int lines) {
   	IntStream.range(0, lines).boxed().forEach(x -> {
 			try {
+				if (writer.getVerticalPosition(false) < 100) return;
 				document.add(new Paragraph("\n"));
 			} catch (DocumentException e) { e.printStackTrace();}
 		}); 

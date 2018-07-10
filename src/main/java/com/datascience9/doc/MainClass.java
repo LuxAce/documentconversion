@@ -88,7 +88,7 @@ public class MainClass {
 	public static void analyze(Path input, Path output) {
 		DocumentTypeAnalyzer analyzer = new DocumentTypeAnalyzer();
 		try {
-			analyzer.sanitizer(input, output);
+			analyzer.sanitize(input, output);
 		} catch (Exception ex) {
 			logger.log(Level.SEVERE, "Cannot extract Word 2 HTML for " + input, ex);
 		}
@@ -107,7 +107,7 @@ public class MainClass {
 		Doc2Html extractor = new Doc2Html();
 		try {
 			extractor.extract(input, output);
-			new HtmlSanitizer().sanitizer(output, output);
+			new HtmlSanitizer().sanitize(output, output);
 		} catch (Exception ex) {
 			logger.log(Level.SEVERE, "Cannot extract Word 2 HTML " , ex);
 		}
@@ -134,7 +134,7 @@ public class MainClass {
    public static void analyze(Path input, Path output, Logger logger) {
 		DocumentTypeAnalyzer analyzer = new DocumentTypeAnalyzer(logger);
 		try {
-			analyzer.sanitizer(input, output);
+			analyzer.sanitize(input, output);
 		} catch (Exception ex) {
 			logger.log(Level.SEVERE, "Cannot extract Word 2 HTML for " + input, ex);
 		}
@@ -153,7 +153,7 @@ public class MainClass {
 		Doc2Html extractor = new Doc2Html(logger);
 		try {
 			extractor.extract(input, output);
-			new HtmlSanitizer(logger).sanitizer(output, output);
+			new HtmlSanitizer(logger).sanitize(output, output);
 		} catch (Exception ex) {
 			logger.log(Level.SEVERE, "Cannot extract Word 2 HTML " , ex);
 		}

@@ -1,6 +1,5 @@
 package com.datascience9.doc.pdf;
 
-import java.awt.Color;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -10,18 +9,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang.StringUtils;
-import org.dom4j.io.SAXReader;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.lowagie.text.Chunk;
-import com.lowagie.text.Font;
-import com.lowagie.text.FontFactory;
 import com.lowagie.text.Image;
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Paragraph;
@@ -31,15 +26,7 @@ import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
 
 public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
-	public static final Font FONT_TITLE = FontFactory.getFont(FontFactory.TIMES_ROMAN, 18, Font.BOLD, Color.blue); //new Font(Font.HELVETICA, 18, Font.BOLD, Color.blue);
-	public static final Font FONT_HEADER = FontFactory.getFont(FontFactory.TIMES_ROMAN, 10, Font.BOLD, Color.blue);//new Font(Font.HELVETICA, 10, Font.BOLD, Color.blue);
-	public static final Font FONT_SMALL = FontFactory.getFont(FontFactory.TIMES_ROMAN, 10, Font.BOLD, Color.black);//new Font(Font.HELVETICA, 10, Font.BOLD, Color.black);
-	public static final Font FONT_ANSWER= FontFactory.getFont(FontFactory.TIMES_ROMAN, 14, Font.BOLD, Color.red);//new Font(Font.HELVETICA, 12, Font.BOLD, Color.red);
-	public static final Font FONT_QUESTION= FontFactory.getFont(FontFactory.TIMES_ROMAN, 14, Font.BOLD, Color.blue);//new Font(Font.HELVETICA, 14, Font.BOLD, Color.blue);
-	public static final Font FONT_CHOICE= FontFactory.getFont(FontFactory.TIMES_ROMAN, 12, Font.NORMAL, Color.black);
-	public static final Font FONT_REG= FontFactory.getFont(FontFactory.TIMES_ROMAN, 12, Font.NORMAL, Color.black);
-	
-	
+
 //	private SAXReader reader;
 	private com.lowagie.text.Document outdoc;
 	private Path input;
@@ -67,11 +54,11 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
     
     writer = MilStd962Xml2PdfHelper2.createDocument(outdoc, root, out);
     writer.setFooter(PDFUtil.getFooter(outdoc));
-    ReportEvent events = new ReportEvent();
-    writer.setPageEvent(events);
+//    ReportEvent events = new ReportEvent();
+//    writer.setPageEvent(events);
     outdoc.open();
     
-    createSelfCoverPage(root);
+    createSelfCoverPage(writer, root);
     
     createBody(root);
     
@@ -80,14 +67,15 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
     writer.close();
 	}
 	
-	private void createSelfCoverPage(Element root) throws Exception
+	private void createSelfCoverPage(PdfWriter writer, Element root) throws Exception
 	{
 		Element selfcover = root.select("selfcover").first();
+		writer.setPageEvent(new MilStd962PageEvent(selfcover));
 		String system_identification = selfcover.select("system_identification").first().html();
 		
 		outdoc.add(MilStd962Xml2PdfHelper.createMeasurementSystemId(system_identification));
 		
-		PDFUtil.addEmptyLines2Document(outdoc, 1);
+		PDFUtil.addEmptyLines2Document(writer, outdoc, 1);
 		
 		outdoc.add(MilStd962Xml2PdfHelper2.createRevision(selfcover.select("revision").first()));
 		
@@ -95,39 +83,45 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 		
 		outdoc.add(MilStd962Xml2PdfHelper2.createTitle(selfcover));
 		
+		
 		Optional<Image> logo = MilStd962Xml2PdfHelper2.createLogo(input, selfcover.select("img").first().attr("src").toString());
-		if (logo.isPresent()) outdoc.add(logo.get());
+		if (logo.isPresent()) {
+			PDFUtil.addEmptyLines2Document(writer, outdoc, 1);
+			outdoc.add(logo.get());
+		}
 
-		PDFUtil.addEmptyLines2Document(outdoc, 16);
+		PDFUtil.addEmptyLines2Document(writer, outdoc, 100);
 		outdoc.add(MilStd962Xml2PdfHelper2.createAsmSection(selfcover));
 		outdoc.add(MilStd962Xml2PdfHelper2.createDistributionStatement(selfcover));
 
 		outdoc.newPage();
+		writer.setPageEvent(null);
 	}
 	
 	private void createBody(Element root) {
 		
-		List<Element> sections = root.select("section");
+		List<Element> sections = root.select("sec");
 		sections.forEach(section -> createSection(section));
 	}
 	
 	private void createSection(Element section) {
+		final float leading = ("contents".equalsIgnoreCase(section.attr("name"))) ? 1.15f : 1.5f;
 		List<Element> pages = section.select("page");
-		pages.forEach(page -> createPage(page));
+		pages.forEach(page -> createPage(page, leading));
 	}
 	
 
-	private void createPage(Element page) {
+	private void createPage(Element page, float leading) {
 		List<Element> divs = page.select("div");
-		divs.forEach(div -> createDiv(div));
+		divs.forEach(div -> createDiv(div, leading));
 		outdoc.newPage();
 	}
 	
-	private void createDiv(Element div) {
+	private void createDiv(Element div, float leading) {
 		List<Element> children = div.children();
 		children.stream().forEach(e -> {
 			if ("p".equalsIgnoreCase(e.tagName())) {
-				Paragraph para = createParagraph(e);
+				Paragraph para = createParagraph(e, leading);
   			try {
   				outdoc.add(para);
     		} catch (Exception ex) {
@@ -147,7 +141,7 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 		});
 	}
 	
-	private Paragraph createParagraph(Element p) {
+	private Paragraph createParagraph(Element p, float leading) {
 		final Paragraph para = (p.children().isEmpty())
 				? new Paragraph(p.text())
 				: new Paragraph();
@@ -171,6 +165,7 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 		
 		children.stream().forEach(ch -> para.add(ch));
 		
+		para.setLeading(leading * para.getFont().getSize());
 		return para;
 	}
 	
@@ -195,7 +190,7 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 	}
 	
 	private Chunk createChunk(Paragraph para, Element span) {
-		Chunk chunk = new Chunk(span.html());
+		Chunk chunk = new Chunk(span.html().replace("&nbsp;", " "));
 		String styleName = span.attr("class");
 		if (StringUtils.isNotEmpty(styleName)) { 
     	Map<String, String> styles = cssStyles.get(styleName);
@@ -256,7 +251,7 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
   	}
   	
   	List<Element> paragraphs = td.select("p");
-  	paragraphs.stream().forEach(p -> cell.addElement(createParagraph(p)));
+  	paragraphs.stream().forEach(p -> cell.addElement(createParagraph(p, 1f)));
   	
   	return cell;
   }
@@ -265,10 +260,6 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 		new Milstd962Xml2Pdf()
 		.generatePDF(Paths.get("/media/paul/workspace/pdftest/AB2514D4D9E142C59A62D353F58EB9C5/result.xml").toFile()
 				, Paths.get("/media/paul/workspace/pdftest/AB2514D4D9E142C59A62D353F58EB9C5/result.pdf").toFile());
-		
-//		new Milstd962Xml2Pdf()
-//		.generate(Paths.get("/media/paul/workspace/pdftest/")
-//				, Paths.get("/media/paul/workspace/pdftest/"));
 	}
 
 }

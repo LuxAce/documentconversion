@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.jsoup.nodes.Element;
 
@@ -37,10 +39,10 @@ public class STD962DSelfCoverParser extends SelfCoverParser {
 		this.localDiv = div;
 		//debug
 		
-		Deque<String> queue = DocumentConverterHelper.stripTag(div.children());
-
-//		System.out.println(queue.toString());
-		
+		Deque<String> queue = DocumentConverterHelper.getTextFromParagraph(div.children());
+		List<String> images = DocumentConverterHelper.getImageFromHtml(div);
+		List<String> asm = getAMSC(div);
+		System.out.println(asm);
 		while (!queue.isEmpty() ) {
 			parseMeasurementIdentification(queue);
 			selfCover.setRevision(parseRevision(queue));
@@ -52,18 +54,14 @@ public class STD962DSelfCoverParser extends SelfCoverParser {
 			if (isStandard(queue.peek())) {
 				selfCover.getHeading().add(queue.pop());
 			}
-			
 			selfCover.getTitle().addAll(parseTitle(queue));
-			
-			parseImage(queue);
-			
-			parseAms(queue);
-			
-			parseFsc(queue);
-			
 			parseDistributionStatement(queue);
 			break;
 		}
+		
+		this.selfCover.setImageStr(images.get(0));
+		this.selfCover.setAms(asm.get(0));
+		this.selfCover.setFsc(asm.get(1));
 	}
 	/**
 	 * A simple parser to parse a queue of tokens
@@ -71,6 +69,7 @@ public class STD962DSelfCoverParser extends SelfCoverParser {
 	 * @param queue
 	 */
 	private Revision parseRevision(Deque<String> queue) {
+
 		Revision local = new Revision();
 		if (isSection6(queue.peek())) {
 			local.setSection6(queue.pop());
@@ -114,9 +113,7 @@ public class STD962DSelfCoverParser extends SelfCoverParser {
 	private List<String> parseTitle(Deque<String> queue) {
 		List<String> titles = new ArrayList<>();
 		while (!queue.isEmpty() 
-				&& !queue.peek().contains("AMSC")
-				&& !isImage(queue.peek())
-				&& !queue.peek().contains(queue.peek().toLowerCase())) {
+				&& !queue.peek().contains("DISTRIBUTION STATEMENT")) {
 			titles.add(queue.pop());
 		}
 		return titles;
@@ -125,22 +122,33 @@ public class STD962DSelfCoverParser extends SelfCoverParser {
 	private void parseDistributionStatement(Deque<String> queue) {
 		selfCover.setDistribution(parseStartsWithArrayKeyWord(queue, DISTRIBUTION));
 	}
-	
-	private void parseImage(Deque<String> queue) {
-		selfCover.setImageStr(parseEndsWithArrayKeyWord(queue, IMAGES));
-	}
-	
-	private void parseAms(Deque<String> queue) {
-		selfCover.setAms(parseStartsWithArrayKeyWord(queue, AMS));
-	}
-	
-	private void parseFsc(Deque<String> queue) {
-		selfCover.setFsc(parseStartsWithArrayKeyWord(queue, FSC));
-	}
-
 
 	public MilStd962DSelfCover getSelfCover() {
 		return selfCover;
+	}
+	
+	/**
+	 * <td class="td1"> <p class="p5"> <span>AMSC N/A</span> </p> </td>
+     <td class="td2"> <p class="p8"> <span>FSC 1510</span> </p> </td> 
+     or
+     <p class="p7"> <span class="s2">AMSC N/A</span><span class="s4"> </span><span class="s5">AREA PACK</span> </p>        
+	 * @param element
+	 * @return
+	 */
+	public static List<String> getAMSC(Element element) {
+		if (DocumentConverterHelper.findElement(element, "table").isEmpty()) {
+			Optional<Element> ams = element.children().stream()
+					.filter(e -> "p".equalsIgnoreCase(e.tagName()))
+					.filter(e -> e.hasText())
+					.filter(e -> e.text().startsWith("AMSC"))
+					.findFirst();
+			if (!ams.isPresent()) throw new IllegalArgumentException("Cannot find AMS");
+			return DocumentConverterHelper.findAllText(ams.get());
+			
+		} else {
+  		List<Element> list = DocumentConverterHelper.findElement(element, "td");
+  		return list.stream().map(e -> e.text()).collect(Collectors.toList());
+		}
 	}
 	
 }

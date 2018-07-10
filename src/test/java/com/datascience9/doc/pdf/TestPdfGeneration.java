@@ -30,7 +30,7 @@ public class TestPdfGeneration {
 	@Test
 	public void testCssStyleSheet() throws Exception {
 		Optional<CSSStyleSheet> optional = PDFUtil.getCssStyleSheet(
-				Paths.get("/media/paul/workspace/pdftest/334566B59C9340B78ED202A31F4E7B15/style.css"));
+				Paths.get("./test/style.css"));
 		CSSStyleSheet stylesheet = optional.get();
 		CSSRuleList rulelists = stylesheet.getCssRules();
 		for (int i = 0 ; i < rulelists.getLength(); i++) {
@@ -68,7 +68,7 @@ public class TestPdfGeneration {
 	
 	@Test
 	public void testGetCssAsMap() {
-		Path xmlFile = Paths.get("/media/paul/workspace/pdftest/334566B59C9340B78ED202A31F4E7B15/result.xml");
+		Path xmlFile = Paths.get("./test/MIL-STD-171.xml");
 		Map<String, Map<String, String>> map = PDFUtil.getCssStyleSheetAsMap(
 				Paths.get(xmlFile.getParent().toString(), "style.css"));
 		
@@ -82,7 +82,7 @@ public class TestPdfGeneration {
     Document document = new Document(PageSize.A4, 50, 50, 50, 50);
     try {
         // creation of the different writers
-        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("./CustomFontsStyle.pdf"));
+        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("./test/CustomFontsStyle.pdf"));
         final String NEWLINE = "\n";
         document.open();
         Phrase phrase = new Phrase();

@@ -1,0 +1,820 @@
+.b1{white-space-collapsing:preserve;}
+.d1{margin: 1.0in 1.0in 0.0in 1.0in;}
+.d2{margin: 0.98888886in 1.0in 0.0in 1.0in;}
+.d3{margin: 0.98888886in 1.0in 0.0in 1.0in;column-count: 2;column-gap: 0.25in;}
+.d4{margin: 0.98888886in 1.0in 0.0in 1.0in;column-count: 3;column-gap: 0.25in;}
+.d5{margin: 0.98888886in 0.19444445in 0.0in 0.19444445in;}
+.d6{margin: 0.98888886in 0.19444445in 0.0in 0.19444445in;column-count: 2;column-gap: 0.25in;}
+.d7{margin: 0.98888886in 0.0in 0.0in 0.0in;}
+.d8{margin: 0.98888886in 0.0in 0.0in 0.0in;column-count: 2;column-gap: 0.25in;}
+.d9{margin: 0.98888886in 0.19444445in 0.0in 0.19444445in;column-count: 3;column-gap: 0.25in;}
+.d10{margin: 0.98888886in 0.4722222in 0.0in 0.4722222in;}
+.p1{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
+.p2{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
+.p3{margin-left:4.013889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p4{margin-left:4.25in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p5{text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p6{text-align:center;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p7{margin-left:0.25in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p8{margin-left:0.25in;margin-right:0.625in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p9{text-align:center;hyphenate:auto;font-family:Arial;font-size:7pt;}
+.p10{text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p11{margin-left:0.25in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p12{text-indent:-0.25in;margin-left:0.75in;margin-right:0.7222222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p13{text-indent:-0.25in;margin-left:0.75in;margin-right:0.5138889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p14{text-indent:0.5in;margin-left:0.25in;margin-right:0.2638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p15{text-indent:0.5in;margin-left:0.25in;margin-right:0.5416667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p16{text-indent:0.5in;margin-left:0.25in;margin-right:0.29166666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p17{margin-left:0.25in;margin-right:0.2638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p18{margin-right:0.013888889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p19{margin-right:0.013888889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:7pt;}
+.p20{text-indent:-0.19444445in;margin-left:0.9444444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p21{text-indent:0.5in;margin-left:0.25in;margin-right:0.375in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p22{text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p23{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:8pt;}
+.p24{text-align:center;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p25{margin-left:0.20833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p26{margin-left:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p27{margin-right:0.125in;text-align:end;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p28{text-align:end;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p29{margin-left:0.25in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p30{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:9pt;}
+.p31{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:11pt;}
+.p32{text-indent:0.5in;margin-left:0.25in;margin-right:0.30555555in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p33{text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p34{text-indent:0.5in;margin-left:0.25in;margin-right:0.7916667in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p35{text-indent:1.4583334in;margin-left:0.75in;margin-right:2.2083333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p36{margin-right:4.9444447in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p37{margin-right:4.9583335in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p38{margin-left:0.6944444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p39{margin-left:0.22222222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p40{margin-left:0.5in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p41{text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p42{margin-left:0.19444445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p43{margin-left:0.5in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p44{margin-left:0.8277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p45{text-indent:-0.23055555in;margin-left:0.23055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p46{text-indent:-0.22916667in;margin-left:0.23055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p47{text-indent:-0.23055555in;margin-left:0.23055555in;margin-right:0.7222222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p48{text-indent:-0.22986111in;margin-left:0.23055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p49{text-indent:-0.23055555in;margin-left:0.23055555in;margin-right:0.5694444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p50{text-indent:-0.22986111in;margin-left:0.23055555in;margin-right:0.6666667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p51{text-indent:-0.22916667in;margin-left:0.23055555in;margin-right:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p52{text-indent:-0.22916667in;margin-left:0.23055555in;margin-right:0.5in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p53{text-indent:-0.22986111in;margin-left:0.23055555in;margin-right:0.4861111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p54{text-indent:-0.22916667in;margin-left:0.23055555in;margin-right:0.44444445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p55{text-indent:-0.22847222in;margin-left:0.23055555in;margin-right:0.5694444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p56{text-indent:-0.22916667in;margin-left:0.23055555in;margin-right:0.5833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p57{margin-left:1.2444445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p58{text-indent:6.9444446E-4in;margin-right:0.9444444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p59{margin-left:0.29166666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p60{margin-left:0.083333336in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p61{text-indent:0.5in;margin-left:0.25in;margin-right:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p62{text-indent:0.5in;margin-left:0.25in;margin-right:0.25in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p63{margin-left:0.375in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p64{text-indent:0.5in;margin-left:0.25in;margin-right:0.5555556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p65{margin-left:0.75in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p66{margin-left:0.375in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p67{text-indent:0.5in;margin-left:0.25in;margin-right:0.3888889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p68{text-indent:0.5in;margin-left:0.25in;margin-right:0.5277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p69{text-indent:0.10208333in;margin-left:2.6111112in;margin-right:2.6111112in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p70{text-indent:0.5in;margin-left:0.25in;margin-right:0.3611111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p71{text-indent:0.5in;margin-left:0.25in;margin-right:0.31944445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p72{text-indent:0.5in;margin-left:0.25in;margin-right:0.2777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p73{text-indent:0.5in;margin-left:0.25in;margin-right:0.3472222in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p74{margin-left:1.5in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p75{margin-left:1.4861112in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p76{margin-right:0.2777778in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p77{margin-left:0.06944445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p78{margin-right:0.9583333in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p79{margin-left:0.055555556in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p80{margin-right:0.9444444in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p81{margin-left:1.4166666in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p82{text-indent:0.5in;margin-left:0.25in;margin-right:0.5277778in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p83{text-indent:-0.25in;margin-left:1.0in;margin-right:0.5277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p84{text-indent:-0.25in;margin-left:1.0in;margin-right:0.45833334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p85{text-indent:-0.25in;margin-left:1.0in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p86{text-indent:0.5in;margin-left:0.25in;margin-right:0.5138889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p87{text-indent:0.5in;margin-left:0.25in;margin-right:0.4722222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p88{margin-left:0.25in;margin-right:0.2638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p89{margin-left:1.8055556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p90{margin-left:0.5277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p91{text-indent:-0.2in;margin-left:0.5277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p92{margin-right:0.034722224in;text-align:end;hyphenate:auto;font-family:Arial;font-size:7pt;}
+.p93{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:1pt;}
+.p94{margin-left:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p95{text-indent:-1.0194445in;margin-left:1.3472222in;margin-right:1.0416666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p96{text-indent:-1.0194445in;margin-left:1.3472222in;margin-right:1.125in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p97{margin-right:0.19444445in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p98{margin-left:0.2638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p99{text-indent:-1.0194445in;margin-left:1.3472222in;margin-right:0.6388889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p100{text-align:start;hyphenate:auto;font-family:Arial;font-size:20pt;}
+.p101{margin-left:0.25in;margin-right:0.375in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p102{margin-right:2.1111112in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p103{margin-right:1.1666666in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p104{margin-right:1.0138888in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p105{margin-left:0.15277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p106{margin-left:0.2777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p107{margin-right:2.1388888in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p108{margin-right:1.3194444in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p109{margin-left:1.2916666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p110{margin-left:0.2777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p111{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:7pt;}
+.p112{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:0pt;}
+.p113{margin-left:0.06944445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p114{margin-left:0.15277778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p115{margin-right:2.1666667in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p116{margin-right:0.11111111in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p117{margin-left:1.2638888in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p118{margin-right:0.45833334in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p119{margin-right:2.2777777in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p120{margin-left:0.9166667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p121{margin-right:1.8333334in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p122{margin-right:0.7361111in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p123{margin-left:0.30555555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p124{margin-left:0.1388889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p125{margin-left:0.125in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p126{margin-left:0.18055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p127{margin-left:0.027777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p128{text-indent:0.5in;margin-left:0.25in;margin-right:0.30555555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p129{margin-right:0.027777778in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p130{margin-left:0.7083333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p131{margin-left:0.097222224in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p132{margin-left:0.2361111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p133{margin-left:0.25in;margin-right:0.41666666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p134{text-indent:0.5in;margin-left:0.25in;margin-right:0.31944445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p135{margin-left:1.5416666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p136{margin-left:1.0138888in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p137{text-align:end;hyphenate:auto;font-family:Arial;font-size:6pt;}
+.p138{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:3pt;}
+.p139{margin-left:0.31944445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p140{margin-left:0.25in;margin-right:0.44444445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p141{margin-right:1.875in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p142{margin-left:0.11111111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p143{margin-right:0.6527778in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p144{margin-left:1.3333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p145{margin-left:0.3888889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p146{margin-left:0.3611111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p147{margin-left:1.6527778in;margin-right:0.2638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p148{margin-left:0.3472222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p149{margin-left:0.7916667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p150{margin-right:0.013888889in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p151{text-indent:0.5in;margin-left:0.25in;margin-right:0.3472222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p152{margin-right:1.5694444in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p153{margin-right:0.6111111in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p154{margin-left:0.7222222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p155{margin-left:0.4027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p156{margin-left:1.0972222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p157{text-indent:0.5in;margin-left:0.25in;margin-right:0.30555555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p158{margin-left:0.8888889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p159{margin-left:0.6527778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p160{margin-left:2.1805556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p161{margin-left:0.9305556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p162{margin-left:0.5694444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p163{margin-left:1.1388888in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p164{text-indent:0.5in;margin-left:0.25in;margin-right:0.4027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p165{text-indent:0.5in;margin-left:0.25in;margin-right:0.43055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p166{text-indent:0.5in;margin-left:0.25in;margin-right:0.5416667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p167{text-indent:0.5in;margin-left:0.25in;margin-right:0.33333334in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p168{text-indent:0.5in;margin-left:0.25in;margin-right:0.44444445in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p169{margin-left:0.16666667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p170{margin-right:0.5138889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p171{margin-right:0.5in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p172{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:4pt;}
+.p173{text-align:start;hyphenate:auto;font-family:Arial;font-size:6pt;}
+.p174{margin-left:0.041666668in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p175{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:5pt;}
+.p176{text-indent:0.5in;margin-left:0.25in;margin-right:0.41666666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p177{text-indent:0.5in;margin-left:0.25in;margin-right:0.8472222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p178{margin-left:0.45833334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p179{margin-left:0.6805556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p180{margin-left:1.2083334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p181{margin-left:0.41666666in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p182{text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:6pt;}
+.p183{margin-left:0.8194444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p184{margin-left:1.125in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p185{text-indent:-0.37430555in;margin-left:0.625in;margin-right:0.2777778in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p186{margin-left:1.0in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p187{margin-left:1.0555556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p188{margin-left:0.25in;margin-right:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p189{margin-left:0.25in;margin-right:0.5416667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p190{text-indent:0.5in;margin-left:0.25in;margin-right:0.5833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p191{margin-right:-0.04097222in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p192{text-indent:0.625in;margin-left:0.25in;margin-right:0.5138889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p193{text-indent:-0.19444445in;margin-left:1.0694444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p194{text-indent:0.5in;margin-left:0.25in;margin-right:0.29166666in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p195{text-indent:0.625in;margin-left:0.25in;margin-right:0.5972222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p196{text-indent:0.625in;margin-left:0.25in;margin-right:0.4861111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p197{text-indent:-0.25in;margin-left:1.375in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p198{text-indent:0.875in;margin-left:0.25in;margin-right:0.43055555in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p199{text-indent:0.5in;margin-left:0.25in;margin-right:0.45833334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p200{text-indent:0.5in;margin-left:0.25in;margin-right:0.5972222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p201{text-indent:-0.69930553in;margin-left:0.9444444in;margin-right:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p202{text-indent:-0.69930553in;margin-left:0.9444444in;margin-right:0.6111111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p203{margin-left:0.9444444in;margin-right:0.5in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p204{margin-left:0.9027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p205{margin-right:0.097222224in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p206{margin-left:0.875in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p207{margin-right:0.15277778in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p208{text-indent:-0.74930555in;margin-left:0.875in;margin-right:0.45833334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p209{text-indent:-0.74930555in;margin-left:0.875in;margin-right:0.43055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p210{text-indent:-0.74930555in;margin-left:0.875in;margin-right:0.4027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p211{text-indent:-0.74930555in;margin-left:0.875in;margin-right:0.3888889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p212{text-indent:-0.74930555in;margin-left:0.875in;margin-right:0.33333334in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p213{margin-left:0.9583333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p214{margin-left:0.5833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p215{margin-left:0.25in;margin-right:0.5972222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:12pt;}
+.p216{text-indent:0.5in;margin-left:0.25in;margin-right:0.6666667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p217{text-indent:0.5in;margin-left:0.25in;margin-right:0.5694444in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p218{text-indent:0.5in;margin-left:0.25in;margin-right:0.625in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p219{text-indent:0.875in;margin-left:0.25in;margin-right:0.3611111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p220{text-indent:0.875in;margin-left:0.25in;margin-right:0.5138889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p221{text-indent:0.875in;margin-left:0.25in;margin-right:0.9722222in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p222{text-indent:0.875in;margin-left:0.25in;margin-right:0.5in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p223{text-indent:0.875in;margin-left:0.25in;margin-right:0.2777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p224{text-indent:0.875in;margin-left:0.25in;margin-right:0.6666667in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p225{text-indent:0.875in;margin-left:0.25in;margin-right:0.4027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p226{text-indent:0.875in;margin-left:0.25in;margin-right:0.2638889in;text-align:justify;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p227{margin-left:0.25in;margin-right:0.8194444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p228{margin-left:0.25in;margin-right:0.3611111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p229{margin-left:3.5972223in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p230{margin-left:3.625in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p231{margin-left:0.20833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p232{margin-left:0.7638889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p233{margin-right:0.055555556in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p234{margin-left:1.1944444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p235{margin-left:0.055555556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p236{text-indent:-0.0020833334in;margin-left:0.083333336in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p237{margin-left:2.8333333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p238{margin-left:0.43055555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p239{margin-left:0.5972222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p240{margin-right:0.44444445in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p241{margin-left:0.4861111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p242{text-indent:-0.26597223in;margin-left:0.3472222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p243{margin-right:0.06944445in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p244{margin-right:1.3333334in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p245{margin-left:3.7916667in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p246{margin-left:3.8194444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p247{margin-left:0.027777778in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p248{margin-right:1.1944444in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p249{margin-left:1.625in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p250{margin-right:0.097222224in;text-align:center;hyphenate:auto;font-family:Arial;font-size:7pt;}
+.p251{margin-right:0.097222224in;text-align:center;hyphenate:auto;font-family:Arial;font-size:8pt;}
+.p252{margin-right:0.625in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p253{margin-left:0.013888889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p254{margin-right:0.041666668in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p255{margin-right:0.3611111in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p256{margin-left:0.041666668in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p257{margin-left:2.8055556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p258{text-indent:-0.0020833334in;margin-left:0.083333336in;margin-right:0.20833333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p259{text-indent:-0.14930555in;margin-left:0.14930555in;margin-right:0.041666668in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p260{text-indent:-0.14930555in;margin-left:0.14930555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p261{text-indent:-0.14930555in;margin-left:0.14930555in;margin-right:0.097222224in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p262{text-indent:-0.14930555in;margin-left:0.14930555in;margin-right:0.083333336in;text-align:start;hyphenate:auto;font-family:Arial;font-size:9pt;}
+.p263{text-indent:-0.17430556in;margin-left:0.17708333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p264{margin-right:0.027777778in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p265{margin-left:0.6111111in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p266{margin-right:0.083333336in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p267{margin-left:0.097222224in;text-align:start;hyphenate:auto;font-family:Arial;font-size:6pt;}
+.p268{text-indent:-0.0020833334in;margin-left:0.083333336in;margin-right:1.375in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p269{margin-right:0.2777778in;text-align:end;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p270{margin-left:0.013888889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p271{margin-left:3.3194444in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p272{margin-left:3.3472223in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p273{margin-right:0.125in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p274{margin-left:0.25in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p275{margin-right:0.1388889in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p276{margin-left:0.8472222in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p277{margin-left:1.7777778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p278{margin-left:1.4027778in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p279{margin-left:4.013889in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p280{margin-left:0.5555556in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p281{margin-left:1.9583334in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p282{margin-left:2.4583333in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p283{margin-left:1.9722222in;text-align:center;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p284{margin-left:0.25in;margin-right:0.30555555in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.p285{margin-left:3.4861112in;text-align:start;hyphenate:auto;font-family:Arial;font-size:10pt;}
+.s1{font-family:Times New Roman;font-size:10pt;}
+.s2{text-decoration:underline;}
+.s3{color:blue;}
+.s4{font-weight:bold;color:#003365;}
+.s5{display: inline-block; text-indent: 0; min-width: 0.4861111in;}
+.s6{color:blue;text-decoration:underline;}
+.s7{color:black;}
+.s8{display: inline-block; text-indent: 0; min-width: 0.2361111in;}
+.s9{display: inline-block; text-indent: 0; min-width: 0.2777778in;}
+.s10{display: inline-block; text-indent: 0; min-width: 0.48472223in;}
+.s11{display: inline-block; text-indent: 0; min-width: 0.48541668in;}
+.s12{display: inline-block; text-indent: 0; min-width: 0.48402777in;}
+.s13{font-family:Times New Roman;}
+.s14{display: inline-block; text-indent: 0; min-width: 0.27291667in;}
+.s15{color:red;}
+.s16{font-size:12pt;vertical-align:super;font-size:smaller;}
+.s17{font-size:9pt;}
+.s18{display: inline-block; text-indent: 0; min-width: 0.15833333in;}
+.s19{font-size:6pt;}
+.s20{vertical-align:super;font-size:smaller;text-decoration:underline;}
+.s21{font-size:10pt;}
+.s22{color:red;text-decoration:underline;}
+.s23{display: inline-block; text-indent: 0; min-width: 0.11111111in;}
+.s24{display: inline-block; text-indent: 0; min-width: 0.3611111in;}
+.s25{display: inline-block; text-indent: 0; min-width: 0.40486112in;}
+.td1{width:0.7916667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td2{width:4.8194447in;padding-start:0.0in;padding-end:0.0in;}
+.td3{width:0.3472222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td4{width:0.7916667in;padding-start:0.0in;padding-end:0.0in;}
+.td5{width:0.3472222in;padding-start:0.0in;padding-end:0.0in;}
+.td6{width:0.125in;padding-start:0.0in;padding-end:0.0in;}
+.td7{width:0.5138889in;padding-start:0.0in;padding-end:0.0in;}
+.td8{width:4.861111in;padding-start:0.0in;padding-end:0.0in;}
+.td9{width:0.3888889in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td10{width:0.3472222in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td11{width:0.6388889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td12{width:0.3888889in;padding-start:0.0in;padding-end:0.0in;}
+.td13{width:1.1666666in;padding-start:0.0in;padding-end:0.0in;}
+.td14{width:0.44444445in;padding-start:0.0in;padding-end:0.0in;}
+.td15{width:3.9444444in;padding-start:0.0in;padding-end:0.0in;}
+.td16{width:4.388889in;padding-start:0.0in;padding-end:0.0in;}
+.td17{width:1.2361112in;padding-start:0.0in;padding-end:0.0in;}
+.td18{width:4.6805553in;padding-start:0.0in;padding-end:0.0in;}
+.td19{width:4.2916665in;padding-start:0.0in;padding-end:0.0in;}
+.td20{width:0.013888889in;padding-start:0.0in;padding-end:0.0in;}
+.td21{width:1.7777778in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td22{width:4.013889in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td23{width:1.7777778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td24{width:4.013889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td25{width:1.7777778in;padding-start:0.0in;padding-end:0.0in;}
+.td26{width:2.5138888in;padding-start:0.0in;padding-end:0.0in;}
+.td27{width:0.30555555in;padding-start:0.0in;padding-end:0.0in;}
+.td28{width:1.0694444in;padding-start:0.0in;padding-end:0.0in;}
+.td29{width:2.2361112in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td30{width:0.2777778in;padding-start:0.0in;padding-end:0.0in;}
+.td31{width:0.30555555in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td32{width:1.5in;padding-start:0.0in;padding-end:0.0in;}
+.td33{width:0.43055555in;padding-start:0.0in;padding-end:0.0in;}
+.td34{width:0.013888889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td35{width:2.2361112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td36{width:0.2777778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td37{width:0.125in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td38{width:1.0694444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td39{width:0.8055556in;padding-start:0.0in;padding-end:0.0in;}
+.td40{width:4.25in;padding-start:0.0in;padding-end:0.0in;}
+.td41{width:5.0555553in;padding-start:0.0in;padding-end:0.0in;}
+.td42{width:0.6944444in;padding-start:0.0in;padding-end:0.0in;}
+.td43{width:0.8194444in;padding-start:0.0in;padding-end:0.0in;}
+.td44{width:4.9027777in;padding-start:0.0in;padding-end:0.0in;}
+.td45{width:2.4027777in;padding-start:0.0in;padding-end:0.0in;}
+.td46{width:0.625in;padding-start:0.0in;padding-end:0.0in;}
+.td47{width:4.875in;padding-start:0.0in;padding-end:0.0in;}
+.td48{width:0.8888889in;padding-start:0.0in;padding-end:0.0in;}
+.td49{width:0.7222222in;padding-start:0.0in;padding-end:0.0in;}
+.td50{width:0.15277778in;padding-start:0.0in;padding-end:0.0in;}
+.td51{width:0.06944445in;padding-start:0.0in;padding-end:0.0in;}
+.td52{width:4.0277777in;padding-start:0.0in;padding-end:0.0in;}
+.td53{width:4.9722223in;padding-start:0.0in;padding-end:0.0in;}
+.td54{width:0.8888889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td55{width:0.7222222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td56{width:0.15277778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td57{width:0.06944445in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td58{width:1.9722222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td59{width:2.0555556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td60{width:0.15277778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td61{width:0.06944445in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td62{width:4.0277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td63{width:0.875in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td64{width:4.0972223in;padding-start:0.0in;padding-end:0.0in;}
+.td65{width:0.9444444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td66{width:0.875in;padding-start:0.0in;padding-end:0.0in;}
+.td67{width:0.7361111in;padding-start:0.0in;padding-end:0.0in;}
+.td68{width:4.3333335in;padding-start:0.0in;padding-end:0.0in;}
+.td69{width:5.1527777in;padding-start:0.0in;padding-end:0.0in;}
+.td70{width:0.7361111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td71{width:0.013888889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td72{width:2.1111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td73{width:2.2222223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td74{width:4.3333335in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td75{width:0.75in;padding-start:0.0in;padding-end:0.0in;}
+.td76{width:4.3333335in;padding-start:0.0in;padding-end:0.0in;border-left:1.0pt solid black;}
+.td77{width:0.11111111in;padding-start:0.0in;padding-end:0.0in;}
+.td78{width:4.3055553in;padding-start:0.0in;padding-end:0.0in;}
+.td79{width:0.11111111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td80{width:2.0833333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td81{width:0.11111111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td82{width:4.3055553in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td83{width:1.0in;padding-start:0.0in;padding-end:0.0in;}
+.td84{width:0.8472222in;padding-start:0.0in;padding-end:0.0in;}
+.td85{width:0.097222224in;padding-start:0.0in;padding-end:0.0in;}
+.td86{width:0.31944445in;padding-start:0.0in;padding-end:0.0in;}
+.td87{width:3.8611112in;padding-start:0.0in;padding-end:0.0in;}
+.td88{width:0.097222224in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td89{width:0.31944445in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td90{width:1.8055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td91{width:0.31944445in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td92{width:3.8611112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td93{width:1.1111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td94{width:0.9027778in;padding-start:0.0in;padding-end:0.0in;}
+.td95{width:0.7083333in;padding-start:0.0in;padding-end:0.0in;}
+.td96{width:0.33333334in;padding-start:0.0in;padding-end:0.0in;}
+.td97{width:0.055555556in;padding-start:0.0in;padding-end:0.0in;}
+.td98{width:3.4166667in;padding-start:0.0in;padding-end:0.0in;}
+.td99{width:4.513889in;padding-start:0.0in;padding-end:0.0in;}
+.td100{width:0.9027778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td101{width:0.7083333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td102{width:0.33333334in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td103{width:0.055555556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td104{width:0.375in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td105{width:1.4305556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td106{width:1.6111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td107{width:0.33333334in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td108{width:0.055555556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td109{width:0.375in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td110{width:3.0416667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td111{width:1.0972222in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td112{width:1.0416666in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td113{width:3.4722223in;padding-start:0.0in;padding-end:0.0in;}
+.td114{width:1.4722222in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td115{width:3.0416667in;padding-start:0.0in;padding-end:0.0in;}
+.td116{width:5.0694447in;padding-start:0.0in;padding-end:0.0in;}
+.td117{width:1.4027778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td118{width:1.8611112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td119{width:1.8055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td120{width:3.6666667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td121{width:0.9166667in;padding-start:0.0in;padding-end:0.0in;}
+.td122{width:5.0in;padding-start:0.0in;padding-end:0.0in;}
+.td123{width:2.9027777in;padding-start:0.0in;padding-end:0.0in;}
+.td124{width:0.083333336in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td125{width:2.0138888in;padding-start:0.0in;padding-end:0.0in;}
+.td126{width:0.083333336in;padding-start:0.0in;padding-end:0.0in;}
+.td127{width:1.75in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td128{width:1.1111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td129{width:2.1388888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td130{width:3.25in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td131{width:0.7638889in;padding-start:0.0in;padding-end:0.0in;}
+.td132{width:0.027777778in;padding-start:0.0in;padding-end:0.0in;}
+.td133{width:4.263889in;padding-start:0.0in;padding-end:0.0in;}
+.td134{width:3.0694444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td135{width:1.1944444in;padding-start:0.0in;padding-end:0.0in;}
+.td136{width:0.8055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td137{width:0.7638889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td138{width:0.027777778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td139{width:2.4166667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td140{width:1.8472222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td141{width:0.027777778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td142{width:4.263889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td143{width:4.611111in;padding-start:0.0in;padding-end:0.0in;}
+.td144{width:1.0833334in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td145{width:2.5277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td146{width:1.0in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td147{width:3.5277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td148{width:2.5277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td149{width:0.9583333in;padding-start:0.0in;padding-end:0.0in;}
+.td150{width:3.6527777in;padding-start:0.0in;padding-end:0.0in;}
+.td151{width:0.9583333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td152{width:2.8055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td153{width:0.8472222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td154{width:3.6527777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td155{width:2.8055556in;padding-start:0.0in;padding-end:0.0in;}
+.td156{width:1.1527778in;padding-start:0.0in;padding-end:0.0in;}
+.td157{width:3.4583333in;padding-start:0.0in;padding-end:0.0in;}
+.td158{width:1.1527778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td159{width:2.4583333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td160{width:3.4583333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td161{width:5.263889in;padding-start:0.0in;padding-end:0.0in;}
+.td162{width:1.125in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td163{width:2.9722223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td164{width:1.1666666in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td165{width:4.138889in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td166{width:1.5694444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td167{width:2.0277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td168{width:1.6666666in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td169{width:3.6944444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td170{width:3.5972223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td171{width:3.5972223in;padding-start:0.0in;padding-end:0.0in;}
+.td172{width:1.6666666in;padding-start:0.0in;padding-end:0.0in;}
+.td173{width:1.6527778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td174{width:1.9027778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td175{width:1.7083334in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td176{width:3.6111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td177{width:3.0138888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td178{width:0.06944445in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid red;}
+.td179{width:1.0972222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td180{width:4.1805553in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td181{width:3.0138888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td182{width:0.2361111in;padding-start:0.0in;padding-end:0.0in;}
+.td183{width:2.1388888in;padding-start:0.0in;padding-end:0.0in;}
+.td184{width:1.5416666in;padding-start:0.0in;padding-end:0.0in;}
+.td185{width:0.375in;padding-start:0.0in;padding-end:0.0in;}
+.td186{width:3.9305556in;padding-start:0.0in;padding-end:0.0in;}
+.td187{width:0.22222222in;padding-start:0.0in;padding-end:0.0in;}
+.td188{width:1.9166666in;padding-start:0.0in;padding-end:0.0in;}
+.td189{width:3.4027777in;padding-start:0.0in;padding-end:0.0in;}
+.td190{width:3.4027777in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td191{width:1.5416666in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td192{width:1.1805556in;padding-start:0.0in;padding-end:0.0in;}
+.td193{width:0.22222222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td194{width:3.1111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td195{width:1.5416666in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td196{width:3.1111112in;padding-start:0.0in;padding-end:0.0in;}
+.td197{width:0.5277778in;padding-start:0.0in;padding-end:0.0in;}
+.td198{width:5.0972223in;padding-start:0.0in;padding-end:0.0in;}
+.td199{width:3.1805556in;padding-start:0.0in;padding-end:0.0in;}
+.td200{width:0.6527778in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td201{width:1.3055556in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td202{width:1.5138888in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td203{width:2.625in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td204{width:0.6527778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td205{width:1.3055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td206{width:1.5138888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td207{width:2.625in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td208{width:0.6527778in;padding-start:0.0in;padding-end:0.0in;}
+.td209{width:1.3055556in;padding-start:0.0in;padding-end:0.0in;}
+.td210{width:1.5138888in;padding-start:0.0in;padding-end:0.0in;}
+.td211{width:2.625in;padding-start:0.0in;padding-end:0.0in;}
+.td212{width:1.0833334in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td213{width:0.083333336in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td214{width:1.8194444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td215{width:1.8194444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td216{width:1.8194444in;padding-start:0.0in;padding-end:0.0in;}
+.td217{width:1.0833334in;padding-start:0.0in;padding-end:0.0in;}
+.td218{width:4.4444447in;padding-start:0.0in;padding-end:0.0in;}
+.td219{width:2.0416667in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td220{width:2.0972223in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td221{width:2.0416667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td222{width:2.0972223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td223{width:2.0416667in;padding-start:0.0in;padding-end:0.0in;}
+.td224{width:2.0972223in;padding-start:0.0in;padding-end:0.0in;}
+.td225{width:2.0277777in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td226{width:2.1111112in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td227{width:2.0277777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td228{width:2.1111112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td229{width:2.0277777in;padding-start:0.0in;padding-end:0.0in;}
+.td230{width:2.1111112in;padding-start:0.0in;padding-end:0.0in;}
+.td231{width:2.9444444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td232{width:2.5416667in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td233{width:2.9444444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td234{width:2.5416667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td235{width:5.486111in;padding-start:0.0in;padding-end:0.0in;}
+.td236{width:2.9444444in;padding-start:0.0in;padding-end:0.0in;}
+.td237{width:2.5416667in;padding-start:0.0in;padding-end:0.0in;}
+.td238{width:1.1111112in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td239{width:0.06944445in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td240{width:1.875in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td241{width:2.5972223in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td242{width:1.875in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td243{width:2.5972223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td244{width:3.0555556in;padding-start:0.0in;padding-end:0.0in;}
+.td245{width:2.5972223in;padding-start:0.0in;padding-end:0.0in;}
+.td246{width:1.1111112in;padding-start:0.0in;padding-end:0.0in;}
+.td247{width:1.875in;padding-start:0.0in;padding-end:0.0in;}
+.td248{width:0.5694444in;padding-start:0.0in;padding-end:0.0in;}
+.td249{width:1.1388888in;padding-start:0.0in;padding-end:0.0in;}
+.td250{width:4.361111in;padding-start:0.0in;padding-end:0.0in;}
+.td251{width:0.5694444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td252{width:1.1388888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td253{width:1.3888888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td254{width:1.0972222in;padding-start:0.0in;padding-end:0.0in;}
+.td255{width:1.3888888in;padding-start:0.0in;padding-end:0.0in;}
+.td256{width:1.3888888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td257{width:4.361111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td258{width:0.16666667in;padding-start:0.0in;padding-end:0.0in;}
+.td259{width:0.16666667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td260{width:1.7361112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td261{width:2.2361112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td262{width:0.5833333in;padding-start:0.0in;padding-end:0.0in;}
+.td263{width:1.7361112in;padding-start:0.0in;padding-end:0.0in;}
+.td264{width:2.2361112in;padding-start:0.0in;padding-end:0.0in;}
+.td265{width:0.5833333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td266{width:3.75in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td267{width:0.41666666in;padding-start:0.0in;padding-end:0.0in;}
+.td268{width:2.5694444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td269{width:1.6388888in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td270{width:0.5555556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td271{width:2.7361112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td272{width:0.6111111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td273{width:2.5694444in;padding-start:0.0in;padding-end:0.0in;}
+.td274{width:1.6388888in;padding-start:0.0in;padding-end:0.0in;}
+.td275{width:0.5555556in;padding-start:0.0in;padding-end:0.0in;}
+.td276{width:1.0138888in;padding-start:0.0in;padding-end:0.0in;}
+.td277{width:1.7222222in;padding-start:0.0in;padding-end:0.0in;}
+.td278{width:0.6111111in;padding-start:0.0in;padding-end:0.0in;}
+.td279{width:2.5694444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td280{width:1.6388888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td281{width:0.5555556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td282{width:1.0138888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td283{width:1.7222222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td284{width:0.6111111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td285{width:7.5in;padding-start:0.0in;padding-end:0.0in;}
+.td286{width:2.3333333in;padding-start:0.0in;padding-end:0.0in;}
+.td287{width:2.5138888in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td288{width:1.6944444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td289{width:3.3472223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td290{width:1.6944444in;padding-start:0.0in;padding-end:0.0in;}
+.td291{width:2.5138888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td292{width:1.6944444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td293{width:2.3333333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td294{width:1.8611112in;padding-start:0.0in;padding-end:0.0in;}
+.td295{width:1.6666666in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td296{width:2.875in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td297{width:0.4722222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td298{width:0.4722222in;padding-start:0.0in;padding-end:0.0in;}
+.td299{width:0.9861111in;padding-start:0.0in;padding-end:0.0in;}
+.td300{width:0.9861111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td301{width:0.4722222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td302{width:2.3472223in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td303{width:1.8611112in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td304{width:2.7638888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td305{width:0.5833333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td306{width:2.3472223in;padding-start:0.0in;padding-end:0.0in;}
+.td307{width:1.0277778in;padding-start:0.0in;padding-end:0.0in;}
+.td308{width:0.8611111in;padding-start:0.0in;padding-end:0.0in;}
+.td309{width:2.3472223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td310{width:1.8611112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td311{width:1.0277778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td312{width:0.8611111in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td313{width:0.4027778in;padding-start:0.0in;padding-end:0.0in;}
+.td314{width:3.3055556in;padding-start:0.0in;padding-end:0.0in;}
+.td315{width:0.31944445in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td316{width:2.2083333in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td317{width:1.6805556in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td318{width:2.7777777in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td319{width:0.5694444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td320{width:2.2083333in;padding-start:0.0in;padding-end:0.0in;}
+.td321{width:1.6805556in;padding-start:0.0in;padding-end:0.0in;}
+.td322{width:1.7638888in;padding-start:0.0in;padding-end:0.0in;}
+.td323{width:2.2083333in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td324{width:1.6805556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td325{width:1.7638888in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td326{width:2.7777777in;padding-start:0.0in;padding-end:0.0in;}
+.td327{width:2.5277777in;padding-start:0.0in;padding-end:0.0in;}
+.td328{width:3.3472223in;padding-start:0.0in;padding-end:0.0in;}
+.td329{width:7.2222223in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td330{width:7.2222223in;padding-start:0.0in;padding-end:0.0in;}
+.td331{width:0.5in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td332{width:1.9444444in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td333{width:1.7083334in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td334{width:2.9861112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td335{width:0.8055556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td336{width:0.5in;padding-start:0.0in;padding-end:0.0in;}
+.td337{width:1.9444444in;padding-start:0.0in;padding-end:0.0in;}
+.td338{width:1.7083334in;padding-start:0.0in;padding-end:0.0in;}
+.td339{width:1.9027778in;padding-start:0.0in;padding-end:0.0in;}
+.td340{width:0.5in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td341{width:1.9444444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td342{width:1.9027778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td343{width:2.4444444in;padding-start:0.0in;padding-end:0.0in;}
+.td344{width:2.9861112in;padding-start:0.0in;padding-end:0.0in;}
+.td345{width:2.2777777in;padding-start:0.0in;padding-end:0.0in;}
+.td346{width:1.0555556in;padding-start:0.0in;padding-end:0.0in;}
+.td347{width:2.4861112in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td348{width:1.7222222in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td349{width:2.4861112in;padding-start:0.0in;padding-end:0.0in;}
+.td350{width:1.75in;padding-start:0.0in;padding-end:0.0in;}
+.td351{width:2.4861112in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td352{width:1.0416666in;padding-start:0.0in;padding-end:0.0in;}
+.td353{width:1.2083334in;padding-start:0.0in;padding-end:0.0in;}
+.td354{width:3.2083333in;padding-start:0.0in;padding-end:0.0in;}
+.td355{width:2.1666667in;padding-start:0.0in;padding-end:0.0in;}
+.td356{width:1.4305556in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td357{width:0.5416667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td358{width:2.6944444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td359{width:1.4305556in;padding-start:0.0in;padding-end:0.0in;}
+.td360{width:0.5416667in;padding-start:0.0in;padding-end:0.0in;}
+.td361{width:1.4305556in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td362{width:0.5416667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td363{width:2.8611112in;padding-start:0.0in;padding-end:0.0in;}
+.td364{width:0.6805556in;padding-start:0.0in;padding-end:0.0in;}
+.td365{width:0.33333334in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td366{width:2.2916667in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td367{width:1.5972222in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td368{width:2.75in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td369{width:0.5972222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td370{width:2.2916667in;padding-start:0.0in;padding-end:0.0in;}
+.td371{width:1.5972222in;padding-start:0.0in;padding-end:0.0in;}
+.td372{width:0.5972222in;padding-start:0.0in;padding-end:0.0in;}
+.td373{width:2.2916667in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td374{width:1.5972222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td375{width:0.5972222in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td376{width:2.1388888in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td377{width:1.9027778in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td378{width:2.9444444in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;border-top:1.0pt solid black;}
+.td379{width:1.2777778in;padding-start:0.0in;padding-end:0.0in;}
+.td380{width:1.2777778in;padding-start:0.0in;padding-end:0.0in;border-bottom:1.0pt solid black;}
+.td381{width:2.1527777in;padding-start:0.0in;padding-end:0.0in;}
+.td382{width:1.5694444in;padding-start:0.0in;padding-end:0.0in;}
+.td383{width:2.3888888in;padding-start:0.0in;padding-end:0.0in;}
+.td384{width:0.11111111in;padding-start:0.0in;padding-end:0.0in;border-top:1.0pt solid black;}
+.td385{width:0.20833333in;padding-start:0.0in;padding-end:0.0in;}
+.td386{width:2.4305556in;padding-start:0.0in;padding-end:0.0in;}
+.td387{width:1.8472222in;padding-start:0.0in;padding-end:0.0in;}
+.td388{width:3.625in;padding-start:0.0in;padding-end:0.0in;}
+.r1{height:0.14375in;keep-together:always;}
+.r2{height:0.30069444in;keep-together:always;}
+.r3{height:0.26666668in;keep-together:always;}
+.r4{height:0.14305556in;keep-together:always;}
+.r5{height:0.14444445in;keep-together:always;}
+.r6{height:0.16527778in;keep-together:always;}
+.r7{height:0.26527777in;keep-together:always;}
+.r8{height:0.2875in;keep-together:always;}
+.r9{height:0.27916667in;keep-together:always;}
+.r10{height:0.13819444in;keep-together:always;}
+.r11{height:0.18263888in;keep-together:always;}
+.r12{height:0.18333334in;keep-together:always;}
+.r13{height:0.29583332in;keep-together:always;}
+.r14{height:0.15972222in;keep-together:always;}
+.r15{height:0.15902779in;keep-together:always;}
+.r16{height:0.17083333in;keep-together:always;}
+.r17{height:0.30555555in;keep-together:always;}
+.r18{height:0.31111112in;keep-together:always;}
+.r19{height:0.14722222in;keep-together:always;}
+.r20{height:0.022222223in;}
+.r21{height:0.1375in;}
+.r22{height:0.28958333in;keep-together:always;}
+.r23{height:0.1625in;keep-together:always;}
+.r24{height:0.15277778in;keep-together:always;}
+.r25{height:0.3013889in;keep-together:always;}
+.r26{height:0.15416667in;keep-together:always;}
+.r27{height:0.15138888in;keep-together:always;}
+.r28{height:0.14027777in;keep-together:always;}
+.r29{height:0.17916666in;keep-together:always;}
+.r30{height:0.28680557in;keep-together:always;}
+.r31{height:0.125in;keep-together:always;}
+.r32{height:0.1423611in;keep-together:always;}
+.r33{height:0.013888889in;}
+.r34{height:0.13680555in;}
+.r35{height:0.14166667in;keep-together:always;}
+.r36{height:0.15208334in;}
+.r37{height:0.14583333in;keep-together:always;}
+.r38{height:0.14305556in;}
+.r39{height:0.15833333in;}
+.r40{height:0.14513889in;keep-together:always;}
+.r41{height:0.14444445in;}
+.r42{height:0.15763889in;}
+.r43{height:0.29444444in;keep-together:always;}
+.r44{height:0.27569443in;keep-together:always;}
+.r45{height:0.16597222in;}
+.r46{height:0.45in;keep-together:always;}
+.r47{height:0.16180556in;keep-together:always;}
+.r48{height:0.15208334in;keep-together:always;}
+.r49{height:0.30208334in;keep-together:always;}
+.r50{height:0.375in;}
+.r51{height:0.06111111in;}
+.r52{height:0.17986111in;keep-together:always;}
+.r53{height:0.1388889in;keep-together:always;}
+.r54{height:0.14652778in;keep-together:always;}
+.r55{height:0.48472223in;keep-together:always;}
+.r56{height:0.28125in;keep-together:always;}
+.r57{height:0.013888889in;keep-together:always;}
+.r58{height:0.16944444in;keep-together:always;}
+.r59{height:0.1701389in;keep-together:always;}
+.r60{height:0.15972222in;}
+.r61{height:0.08263889in;}
+.r62{height:0.065972224in;}
+.r63{height:0.22083333in;}
+.r64{height:0.090277776in;}
+.r65{height:0.15902779in;}
+.r66{height:0.103472225in;}
+.r67{height:0.05625in;}
+.r68{height:0.055555556in;}
+.r69{height:0.099305555in;}
+.r70{height:0.06666667in;}
+.r71{height:0.19166666in;keep-together:always;}
+.r72{height:0.16805555in;keep-together:always;}
+.r73{height:0.18333334in;}
+.r74{height:0.13541667in;}
+.r75{height:0.11597222in;}
+.r76{height:0.09861111in;}
+.r77{height:0.32569444in;keep-together:always;}
+.r78{height:0.13958333in;keep-together:always;}
+.r79{height:0.14166667in;}
+.r80{height:0.4548611in;keep-together:always;}
+.r81{height:0.25416666in;keep-together:always;}
+.r82{height:0.24513888in;keep-together:always;}
+.r83{height:0.23194444in;keep-together:always;}
+.r84{height:0.083333336in;keep-together:always;}
+.r85{height:0.29375in;keep-together:always;}
+.r86{height:0.114583336in;keep-together:always;}
+.r87{height:0.23125in;keep-together:always;}
+.r88{height:0.31944445in;keep-together:always;}
+.r89{height:0.13611111in;}
+.r90{height:0.2375in;keep-together:always;}
+.r91{height:0.42291668in;}
+.r92{height:0.22361112in;keep-together:always;}
+.r93{height:0.35972223in;}
+.r94{height:0.35902777in;}
+.r95{height:0.104166664in;}
+.r96{height:0.079166666in;}
+.r97{height:0.26319444in;keep-together:always;}
+.r98{height:0.33333334in;keep-together:always;}
+.r99{height:0.07986111in;}
+.r100{height:0.29583332in;}
+.r101{height:0.07986111in;keep-together:always;}
+.r102{height:0.61527777in;keep-together:always;}
+.r103{height:0.3201389in;}
+.r104{height:0.21666667in;keep-together:always;}
+.r105{height:0.17569445in;keep-together:always;}
+.r106{height:0.15138888in;}
+.r107{height:0.15416667in;}
+.r108{height:0.072222225in;keep-together:always;}
+.r109{height:0.47916666in;keep-together:always;}
+.r110{height:0.6145833in;keep-together:always;}
+.t1{table-layout:fixed;border-collapse:collapse;border-spacing:0;}

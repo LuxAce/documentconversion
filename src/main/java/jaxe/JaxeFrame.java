@@ -63,9 +63,11 @@ import jaxe.elements.JESwing;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
+import com.datascience9.doc.ConstantHelper;
 import com.datascience9.doc.MainClass;
 import com.datascience9.doc.preprocessing.Doc2Html;
 import com.datascience9.doc.preprocessing.HtmlSanitizer;
+import com.datascience9.doc.transform.MilStdTransfomer;
 
 /**
  * Fen�tre de Jaxe
@@ -103,7 +105,7 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
     
     public JaxeDocument doc;
     
-    private File fichierAOuvrir;
+    private File openedFile;
     private File configAOuvrir;
     
     
@@ -410,7 +412,7 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
     }
     
     public void openWithConf(final File f, final File fconf) {
-        fichierAOuvrir = f;
+        openedFile = f;
         configAOuvrir = fconf;
         (new OpenThread()).start();
     }
@@ -418,11 +420,11 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
     class OpenThread extends Thread {
         @Override
         public void run() {
-            ouvrirPlusTard();
+            openDoc();
         }
     }
     
-    public void ouvrirPlusTard() {
+    public void openDoc() {
         if (validationFrame != null) {
             validationFrame.setVisible(false);
             validationFrame.dispose();
@@ -450,15 +452,16 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
         
         URL u ;
         try {
-            u = fichierAOuvrir.toURI().toURL();
+            u = openedFile.toURI().toURL();
             Path xmlPath = convertHtml2Xml(u);
             u = xmlPath.toUri().toURL();
             System.out.println("opening " + u.toString());
         } catch (final MalformedURLException ex) {
-            LOG.error("ouvrirPlusTard() - MalformedURLException", ex);
+            LOG.error("openDoc() - MalformedURLException", ex);
             attente.dispose();
             setCursor(null);
             fermer(true);
+            this.dispose();
             return;
         }
         final String cheminConfig;
@@ -481,10 +484,10 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
             fileName = URLDecoder.decode(u.getFile(), "UTF-8");
         } catch (final UnsupportedEncodingException ex) {
             fileName = u.getFile();
-            LOG.error("JaxeFrame.ouvrirPlusTard", ex);
+            LOG.error("JaxeFrame.openDoc", ex);
         }
         setTitle(fileName);
-        getRootPane().putClientProperty("Window.documentFile", fichierAOuvrir); // pour MacOS X
+        getRootPane().putClientProperty("Window.documentFile", openedFile); // pour MacOS X
         caretListenerLabel.setText("");
         textPane.addCaretListener(caretListenerLabel);
         
@@ -538,13 +541,15 @@ public class JaxeFrame extends JFrame implements ComponentListener, EcouteurMAJ 
 			}
     	new Doc2Html().extractTextFromFile(input, output);
     	Path htmlFile = Paths.get(output.toString(), dirName + ".html");
-    	new HtmlSanitizer().cleanHtmlFile(htmlFile, output);
+    	new HtmlSanitizer().cleanHtml(htmlFile);
 //  		logger.info("the extraction is complete... and analysis phase is starting ...");
 //  		MainClass.analyze(output, output);
 ////  		logger.info("the analysis is complete... and meta analysis phase is starting ...");
 //  		MainClass.analyzeMeta(output, output);
 //  		logger.info("the meta analysis is complete... and transformation phase is starting ...");
-  		MainClass.transform2XML(output, output);
+    	Path xmlFile = Paths.get(output.toString(), "clean.html");
+    	System.out.println("html file " + xmlFile.toString());
+  		new MilStdTransfomer(ConstantHelper.STD_TEMPLATE_FILE).transformFile(xmlFile);
   		
   		Path xmlPath = Paths.get(output.toString(), "result.xml");
   		return xmlPath;

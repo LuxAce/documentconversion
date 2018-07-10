@@ -78,4 +78,10 @@ public class DocumentTypeAnalyzer extends HtmlAnalyzer {
 		}
 	}
 
+	@Override
+	public void collectStatistics(Document doc) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

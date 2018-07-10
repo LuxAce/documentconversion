@@ -27,145 +27,136 @@
                 </xs:complexType>
               </xs:element>
               <xs:element type="xs:string" name="ams"/>
+              <xs:element type="xs:string" name="fsc"/>
               <xs:element type="xs:string" name="distribution"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="section" maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="foreword">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="page" maxOccurs="unbounded" minOccurs="0">
+              <xs:element name="p" maxOccurs="unbounded" minOccurs="0">
                 <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="div" maxOccurs="unbounded" minOccurs="0">
-                      <xs:complexType mixed="true">
-                        <xs:choice maxOccurs="unbounded" minOccurs="0">
-                          <xs:element name="p">
-                            <xs:complexType>
-                              <xs:sequence>
-                                <xs:element name="a" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:simpleContent>
-                                      <xs:extension base="xs:string">
-                                        <xs:attribute type="xs:string" name="name" use="optional"/>
-                                      </xs:extension>
-                                    </xs:simpleContent>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="span" maxOccurs="unbounded" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:simpleContent>
-                                      <xs:extension base="xs:string">
-                                        <xs:attribute type="xs:string" name="class" use="optional"/>
-                                      </xs:extension>
-                                    </xs:simpleContent>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="tbody" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="tr" maxOccurs="unbounded" minOccurs="0">
-                                        <xs:complexType>
-                                          <xs:sequence>
-                                            <xs:element name="td" maxOccurs="unbounded" minOccurs="0">
-                                              <xs:complexType mixed="true">
-                                                <xs:sequence>
-                                                  <xs:element name="p" minOccurs="0">
-                                                    <xs:complexType>
-                                                      <xs:sequence>
-                                                        <xs:element type="xs:string" name="span"/>
-                                                      </xs:sequence>
-                                                      <xs:attribute type="xs:string" name="class" use="optional"/>
-                                                    </xs:complexType>
-                                                  </xs:element>
-                                                </xs:sequence>
-                                                <xs:attribute type="xs:string" name="class" use="optional"/>
-                                                <xs:attribute type="xs:byte" name="colspan" use="optional"/>
-                                              </xs:complexType>
-                                            </xs:element>
-                                          </xs:sequence>
-                                          <xs:attribute type="xs:string" name="class" use="optional"/>
-                                        </xs:complexType>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:sequence>
-                              <xs:attribute type="xs:string" name="class" use="optional"/>
-                            </xs:complexType>
-                          </xs:element>
-                          <xs:element name="table">
-                            <xs:complexType>
-                              <xs:sequence>
-                                <xs:element name="tbody" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="tr" maxOccurs="unbounded" minOccurs="0">
-                                        <xs:complexType>
-                                          <xs:sequence>
-                                            <xs:element name="td" maxOccurs="unbounded" minOccurs="0">
-                                              <xs:complexType mixed="true">
-                                                <xs:sequence>
-                                                  <xs:element name="p" minOccurs="0">
-                                                    <xs:complexType>
-                                                      <xs:sequence>
-                                                        <xs:element name="a" minOccurs="0">
-                                                          <xs:complexType>
-                                                            <xs:simpleContent>
-                                                              <xs:extension base="xs:string">
-                                                                <xs:attribute type="xs:string" name="name" use="optional"/>
-                                                              </xs:extension>
-                                                            </xs:simpleContent>
-                                                          </xs:complexType>
-                                                        </xs:element>
-                                                        <xs:element name="span" maxOccurs="unbounded" minOccurs="0">
-                                                          <xs:complexType>
-                                                            <xs:simpleContent>
-                                                              <xs:extension base="xs:string">
-                                                                <xs:attribute type="xs:string" name="class" use="optional"/>
-                                                              </xs:extension>
-                                                            </xs:simpleContent>
-                                                          </xs:complexType>
-                                                        </xs:element>
-                                                      </xs:sequence>
-                                                      <xs:attribute type="xs:string" name="class" use="optional"/>
-                                                    </xs:complexType>
-                                                  </xs:element>
-                                                </xs:sequence>
-                                                <xs:attribute type="xs:string" name="class" use="optional"/>
-                                                <xs:attribute type="xs:byte" name="colspan" use="optional"/>
-                                                <xs:attribute type="xs:byte" name="rowspan" use="optional"/>
-                                              </xs:complexType>
-                                            </xs:element>
-                                          </xs:sequence>
-                                          <xs:attribute type="xs:string" name="class" use="optional"/>
-                                        </xs:complexType>
-                                      </xs:element>
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                                <xs:element name="span" maxOccurs="unbounded" minOccurs="0">
-                                  <xs:complexType>
-                                    <xs:simpleContent>
-                                      <xs:extension base="xs:string">
-                                        <xs:attribute type="xs:string" name="class" use="optional"/>
-                                      </xs:extension>
-                                    </xs:simpleContent>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:sequence>
-                              <xs:attribute type="xs:string" name="class" use="optional"/>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:choice>
-                        <xs:attribute type="xs:string" name="class" use="optional"/>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                  <xs:attribute type="xs:byte" name="number" use="optional"/>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="id" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="toc">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sec" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="sub" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                            <xs:attribute type="xs:byte" name="page" use="optional"/>
+                            <xs:attribute type="xs:string" name="text" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="text" use="optional"/>
+                  <xs:attribute type="xs:string" name="page" use="optional"/>
+                  <xs:attribute type="xs:float" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sec" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element name="p">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="img" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="src"/>
+                            <xs:attribute type="xs:string" name="style"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="span" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="class" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="class" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="table">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tbody" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="tr" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="td" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                      <xs:element name="p" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="span">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:string" name="class" use="optional"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="class" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="class" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="colspan" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="class" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="span" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="class" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="class" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
             <xs:attribute type="xs:string" name="name" use="optional"/>
           </xs:complexType>
         </xs:element>

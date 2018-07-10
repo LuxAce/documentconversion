@@ -13,6 +13,12 @@ public abstract class DocConverter {
 	protected Logger logger = LoggingUtil.getLogger(this.getClass().getName());
 	protected Logger developerLogger = LoggingUtil.getDeveloperLogger(this.getClass().getName());
 	
+	/**
+	 * convert MS Word to HTML
+	 * @param input dir
+	 * @param output dir
+	 * @throws Exception
+	 */
 	public void extract(Path input, Path output) throws Exception {
 		Files.list(input)
 		.filter(f -> f.toFile().getName().endsWith(".doc"))
@@ -26,7 +32,7 @@ public abstract class DocConverter {
 	public abstract void extractText(Path input, Path output );
 	
 	/**
-	 * 
+	 * Convert MS word document to an html file
 	 * @param input file
 	 * @param output dir
 	 */

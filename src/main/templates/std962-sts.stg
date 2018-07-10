@@ -5,7 +5,7 @@ doc(docName, selfcover, sections) ::= <<
 ]>
 <doc name="$docName$">
 	$selfcover$
-	$sections; separator="\n"$
+	$sections$
 </doc>
 >>
 
@@ -21,7 +21,6 @@ selfcover(selfcover) ::= <<
   <title>$selfcover.title; separator="\n"$</title> 
   <img src="$selfcover.imageStr$"/>  
   <ams>$selfcover.ams$</ams>  
-  <fsc>$selfcover.fsc$</fsc>  
   <distribution>$selfcover.distribution$</distribution> 
 </selfcover>  
 >>
@@ -48,28 +47,15 @@ sections(sections) ::= <<
 	$sections; separator="\n"$
 >>
 
-section(name, pages, tag) ::= <<
-<$tag$ $if(name)$name="$name$"$endif$>
+section(name, pages) ::= <<
+<sec name="$name$">
 	$pages; separator="\n"$
-</$tag$>
+</section>
 >>
 
-tocsection(id, page, text, tag, sub) ::= <<
-<$tag$ $if(id)$id="$id$"$endif$ $if(page)$page="$page$"$endif$ text="$text$">
-	$sub; separator="\n"$
-</$tag$>
->>
 
 page(divs, number) ::= <<
 <page number="$number$">
 	$divs; separator="\n"$
 </page>
->>
-
-paragraphs(para) ::= <<
-$para; separator="\n"$
->>
-
-paragraph(id, text) ::= <<
-<p id="$id$">$text$</p>
 >>

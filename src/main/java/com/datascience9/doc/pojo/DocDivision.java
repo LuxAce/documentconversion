@@ -1,13 +1,15 @@
 package com.datascience9.doc.pojo;
 
+import org.jsoup.nodes.Element;
+
 public class DocDivision {
-	String html;
+	Element html;
 	int pageNumber;
 	String sectionName;
-	public String getHtml() {
+	public Element getHtml() {
 		return html;
 	}
-	public void setHtml(String html) {
+	public void setHtml(Element html) {
 		this.html = html;
 	}
 	public int getPageNumber() {
