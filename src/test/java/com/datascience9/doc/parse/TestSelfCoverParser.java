@@ -36,7 +36,7 @@ public class TestSelfCoverParser {
 		Path input = Paths.get("./test/parsing/MIL-STD-1791C.html");
   	Document doc = Jsoup.parse(input.toFile(), "UTF-8");
   	
-  	List<String> tds = DocumentConverterHelper.getAMSC(doc.body().select("div").first());
+  	List<String> tds = STD962DSelfCoverParser.getAMSC(doc.body().select("div").first());
   	assertEquals("found the ASM", "AMSC N/A", tds.get(0));
   	assertEquals("found the ASM", "FSC 1510", tds.get(1));
 	}
