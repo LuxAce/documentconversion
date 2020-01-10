@@ -73,7 +73,7 @@ public class Milstd962Xml2Pdf extends PDFGeneratorImpl {
 		writer.setPageEvent(new MilStd962PageEvent(selfcover));
 		String system_identification = selfcover.select("system_identification").first().html();
 		
-		outdoc.add(MilStd962Xml2PdfHelper.createMeasurementSystemId(system_identification));
+		outdoc.add(MilStd962Xml2PdfHelper2.createMeasurementSystemId(system_identification));
 		
 		PDFUtil.addEmptyLines2Document(writer, outdoc, 1);
 		
