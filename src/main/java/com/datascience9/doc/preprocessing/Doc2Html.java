@@ -32,15 +32,6 @@ public class Doc2Html extends DocConverter {
   public Doc2Html(Logger logger) {
     this.logger = logger;
   }
-  
-	public static void main (String[] args) throws Throwable {
-		new Doc2Html().extract(
-				Paths.get("/media/paul/workspace/pdftest/"), 
-  			Paths.get("/media/paul/workspace/pdftest/"));
-//  	new Doc2Xml().extractText(
-//  			Paths.get("/media/paul/workspace/pdftest/334566B59C9340B78ED202A31F4E7B15.doc"), 
-//  			Paths.get("/media/paul/workspace/pdftest/"));
-  }
 	
 	@Override
 	public void extractText(Path input, Path output) {
@@ -69,10 +60,10 @@ public class Doc2Html extends DocConverter {
 		}
 	}
 	/**
-	 * Convert doc to HTML
-	 * @param path
-	 * @param file
-	 * @throws Throwable
+	 * Convert doc to HTML.
+	 * @param inputFile - a word document.
+	 * @param outputDir - an output directory.
+	 * @throws Exception - throw an exception.
 	 */
 	public void convert(File inputFile, File outputDir) throws  Exception {
 		

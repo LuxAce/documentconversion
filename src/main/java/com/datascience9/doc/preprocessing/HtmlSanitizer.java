@@ -155,10 +155,4 @@ public class HtmlSanitizer {
 		}
 		return imgs;
 	}
-	
-	public static void main(String[] s) throws Exception {
-		new HtmlSanitizer()
-		.sanitize(Paths.get("/media/paul/workspace/pdftest/output")
-				, Paths.get("/media/paul/workspace/pdftest/output"));
-	}
 }

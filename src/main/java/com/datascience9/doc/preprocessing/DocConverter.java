@@ -26,8 +26,9 @@ public abstract class DocConverter {
 	}
 	
 	/**
-	 * @param input dir
-	 * @param output.  Outputdir = output + input
+	 * extract text from a word document.
+	 * @param input dir.
+	 * @param output -  Outputdir = output + input
 	 */
 	public abstract void extractText(Path input, Path output );
 	
@@ -39,21 +40,20 @@ public abstract class DocConverter {
 	public abstract void extractTextFromFile(Path input, Path output );
 	
 	/**
-	 * The write file
-	 * @param content
-	 * @param path
-	 * @param encode
+	 * Write string to a file.
+	 * @param s - input string.
+	 * @param path - output file
 	 */
 	public static void writeStringToFile(Path path, String s) throws Exception {
 
 		if (null == path)
 			throw new IllegalArgumentException("Input file required!");
 
-		BufferedWriter writer = new BufferedWriter(
+		try (BufferedWriter writer = new BufferedWriter(
 				new OutputStreamWriter(
-		    new FileOutputStream(path.toFile()), "UTF-8"));
-		writer.write(s);
-		writer.flush();
-		writer.close();
+		    new FileOutputStream(path.toFile()), "UTF-8"))) {
+			writer.write(s);
+			writer.flush();
+		}
 	}
 }

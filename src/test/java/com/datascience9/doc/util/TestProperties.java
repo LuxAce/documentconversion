@@ -16,8 +16,8 @@ public class TestProperties {
 	
 	@Test
 	public void testReadProperties() {
-		assertEquals("expect to equals", "test6", ConfigurationHelper.getInputDir());
-		assertEquals("expect to equals", "test1", ConfigurationHelper.getOutputDir());
+		assertEquals("expect to equals", "input", ConfigurationHelper.getInputDir());
+		assertEquals("expect to equals", "output", ConfigurationHelper.getOutputDir());
 		assertNotEquals("expect Not equals", "test3", ConfigurationHelper.getOutputDir());
 	}
 	

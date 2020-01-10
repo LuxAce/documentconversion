@@ -12,11 +12,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 
 public class Pdf2Text {
-	
-	public static void main(String[] s) throws Exception {
-		extract(Paths.get("/media/paul/workspace/pdftest/"), Paths.get("./"));
-	}
-	
+
 	public static void extract(Path input, Path output) throws Exception {
 		Files.list(input)
 //		.filter(f -> f.getFileName().endsWith(".pdf"))

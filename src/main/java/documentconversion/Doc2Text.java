@@ -41,11 +41,6 @@ public class Doc2Text extends DocConverter {
       
 		} catch (Exception ex) { ex.printStackTrace(System.out); }
 	}
-	
-	public static void main (String[] args) throws Throwable {
-		DocConverter converter = new Doc2Text();
-		converter.extract(Paths.get("/media/paul/workspace/pdftest/"), Paths.get("/media/paul/workspace/pdftest/"));
-  }
 
 	@Override
 	public void extractTextFromFile(Path input, Path output) {

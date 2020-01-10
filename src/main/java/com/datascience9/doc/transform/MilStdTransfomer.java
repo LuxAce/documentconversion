@@ -393,7 +393,8 @@ public class MilStdTransfomer extends Html2XmlTransfomer {
 				TocSection sec = new TocSection(null, row.text(), null);
 				tocSections.add(sec);
 				//add sub sections
-				while (!queue.isEmpty() 
+				while (!queue.isEmpty()
+						&& queue.peek().text() != null
 						&& (queue.peek().text().matches(regex) 
 								|| queue.peek().text().matches(regex1))
 						|| queue.peek().text().matches(regex2)) {
